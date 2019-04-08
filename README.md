@@ -54,3 +54,7 @@ Makes learning notes fun on the piano using a pc. Makes keyboarding more interac
 * More Music Sheets - Add more music 
 * Write Music
 * Sound board
+
+### Currently Unassigned Stretch Goals
+* As a user, I want a history tracker of the keys that have pressed to be display above the piano.
+* As a user, I want some sort of validation that I have pressed the right keys that are located on the music sheet

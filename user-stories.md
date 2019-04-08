@@ -25,6 +25,6 @@
 * As a user, I want the piano emulator to be operated by keypress so that I can interact in a similar fashion to playing the piano.
 * As a user, I want the piano page to have an example of a music sequence, so I can make something nice-sounding immediately regardless of my musical background.
 
-Stretch Goals\
+Stretch Goals
 * As a user, I want a history tracker of the keys that have pressed to be display above the piano.
 * As a user, I want some sort of validation that I have pressed the rigth keys that are located on the music sheet
