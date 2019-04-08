@@ -2,10 +2,10 @@
 Proof-of-concept for a piano simulator to fulfill a Codefellows 201 final project.
 
 ## Group Members
-Chloie Parson
-Conor McCue
-Edric DeArment
-Felipe Delatorre
+Chloie Parson\
+Conor McCue\
+Edric DeArment\
+Felipe Delatorre\
 Jeff Lawrence
 
 ## Description of Project
@@ -14,11 +14,11 @@ Piano simulator where keys on keyboard play notes when pressed.
 ## Version 1.0.0
 
 ## Libraries and Frameworks
-reset.css
+reset.css\
 eslint.json
 
 ## Domain
-Makes learning notes fun on the piano using a pc. Makes keyboarding more interactiving using piano keys
+Makes learning notes on the piano funa using a pc. Makes keyboarding more interactive using piano keys.
 
 ### MVP1:
 * About Us Page
@@ -54,3 +54,7 @@ Makes learning notes fun on the piano using a pc. Makes keyboarding more interac
 * More Music Sheets - Add more music 
 * Write Music
 * Sound board
+
+### Currently Unassigned Stretch Goals
+* As a user, I want a history tracker of the keys that have pressed to be display above the piano.
+* As a user, I want some sort of validation that I have pressed the right keys that are located on the music sheet
