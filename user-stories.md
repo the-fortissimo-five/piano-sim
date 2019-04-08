@@ -8,6 +8,8 @@ As a member of the development team, I want to display a photo of each of us alo
 
 As a member of the audience, I’d like to see those introductions, so that I can place the project into the context of the development team’s educational path.
 
+As a member of the audience, I'd like to be able to find a way to contact the creators of the project, so I can forward any follow-up questions to an appropriate person.
+
 #Index/Piano Page
 
 As a user, I want a navigation bar with eye-catching styling and descriptive names, so that I can navigate quickly to whatever I’d like to see on the web app.
