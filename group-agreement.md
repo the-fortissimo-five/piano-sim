@@ -31,3 +31,8 @@ How will you ensure that you are creating a safe environment where everyone feel
   Empathetically consider eachother.
   Give gentle feedback.
   Welcome the feedback.
+
+
+How long until we go ask for help?
+
+When we will make the decision to have to work outside of regular hours?
