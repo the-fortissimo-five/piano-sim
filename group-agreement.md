@@ -9,8 +9,9 @@ Keep it simple.
 Maintain humor.
 
   Expectations: Members will be present each day and give their best effort.
-  Members will seek help when encountering issues they can't quickly resolve on their own. 
+  Members will seek help when encountering issues they can't quickly resolve (within 10-15 minutes) on their own. 
   Members have the option to work outside of class hours, but aren't expected to unless the group revises these expectations.
+  At the end of each day Members will meet to discuss their progress and any necessary revisions to our expected work hours. These decisions will be made by group vote where the simple majority wins. Exceptions made be made in case of exceptional circumstances.
 
 Conflict Plan: When conflict is encountered...
 1. Discuss the difference of ideas and try to settle the issue as individuals.
@@ -31,8 +32,5 @@ How will you ensure that you are creating a safe environment where everyone feel
   Empathetically consider eachother.
   Give gentle feedback.
   Welcome the feedback.
-
-
-How long until we go ask for help?
 
 When we will make the decision to have to work outside of regular hours?
