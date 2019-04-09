@@ -56,13 +56,15 @@ sheetMusicObjectConstructor.prototype.render = function(parentId){
   parent.appendChild(img);
 };
 new sheetMusicObjectConstructor(sheetMusicArray[0][0], sheetMusicArray[0][1]);
-console.log(sheetMusicObject);
-console.log(sheetMusicArray[0][0]);
-console.log(sheetMusicObject[sheetMusicArray[0][0]]);
-sheetMusicObject[sheetMusicArray[0][0]].render('music-sheet');
+
 
 (function onPageLoad(){
   for(var i = 0; i < soundArray.length; i++){
     new keyboardObjectConstructor(soundArray[i][0], soundArray[i][1]);
   }
 })();
+
+console.log(sheetMusicObject);
+console.log(sheetMusicArray[0][0]);
+console.log(sheetMusicObject[sheetMusicArray[0][0]]);
+sheetMusicObject[sheetMusicArray[0][0]].render(`item_${0}`);
