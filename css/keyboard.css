@@ -1,12 +1,21 @@
 #mainContainer {
   background-color: wheat;
   display: grid;
-  grid-template: 50px 50px 250px 500px / repeat(12, 1fr);
+  grid-template: 75px 50px 250px 500px 1fr / repeat(12, 1fr);
   grid-gap: 5px;
 }
 nav {
-  grid-column: 6 / 8;
-  text-align: center;
+  grid-column: 1 / last;
+  grid-row: 1;
+  justify-self: center;
+}
+nav p {
+  display: inline-block;
+  font-size: 20px;
+  padding: 20px 100px;
+  border: 5px outset black;
+  margin: 0px -2px;
+  background-color: peachpuff;
 }
 header {
   text-align: center;
@@ -21,7 +30,11 @@ header {
   height: 250px; 
   width: 500px;
 }
-
+#keyboardInput {
+  grid-column: 1 / last;
+  grid-row: 5;
+  justify-self: center;
+}
 #pianoKeyboard {
   grid-column: 2 / 12;
   grid-row: 4;
