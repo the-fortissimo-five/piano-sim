@@ -25,13 +25,31 @@ function keyboardObjectConstructor(name, audioURL){
 
   keyboardObject[this.name] = this;
 }
+
+//play prototype
+//-----------------------
+keyboardObjectConstructor.prototype.play = function(){
+
+};
 // console.log(new keyboardObjectConstructor(soundArray[0], soundArray[1]));
 // console.log(keyboardObject);
-function sheetMusicObjectConstructor(imgFilePath){
+function sheetMusicObjectConstructor(name, imgFilePath){
+  this.name = name;
   this.imgFilePath =imgFilePath;
 
-  sheetMusicObject['sheetMusicFilePath'] = this.imgFilePath;
+  sheetMusicObject[this.name] = this;
 }
+//render prototype
+//----------------------
+sheetMusicObjectConstructor.prototype.render = function(parentId){
+  var parent = document.getElementById(parentId);
 
+  var img = document.createElement('img');
+  img.setAttribute('id', this.name);
+  img.setAttribute('src', this.imgFilePath);
+  img.setAttribute('class', 'sheetMusic');  //delete later if we don't end up using
+
+  parent.appendChild(img);
+};
 // console.log(new sheetMusicObjectConstructor(sheetMusicArray[1]));
 // console.log(sheetMusicObject);
