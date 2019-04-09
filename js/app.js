@@ -73,6 +73,9 @@ function keyLogEventHandler(event){
   keyboardObject[event.code].play();
 }
 
+function clearTextField(){
+  document.getElementById('keyboardInput').value = ''
+}
 
 (function onPageLoad(){
   for(var i = 0; i < soundArray.length; i++){
