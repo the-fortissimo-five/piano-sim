@@ -12,7 +12,8 @@ var soundArray = [
 ];
 
 var sheetMusicArray = [
-  ['odeToJoy', './assets/img/odeDefault.png', './assets/img/odePicked.png'],
+  ['odeToJoy', './assets/img/odeDefault.jpg', './assets/img/odePicked.jpg'],
+  ['cmajor', './assets/img/cmajorDefault.jpg', './assets/img/cmajorPicked.jpg']
 ];
 
 // console.log(soundArray);
@@ -29,11 +30,13 @@ function keyboardObjectConstructor(name, audioURL){
 
 //play prototype
 //-----------------------
-keyboardObjectConstructor.prototype.play = function(){
+keyboardObjectConstructor.prototype.play = function(keyID){
 
+
+  keyID.play();
 };
 // console.log(new keyboardObjectConstructor(soundArray[0], soundArray[1]));
-// console.log(keyboardObject);
+console.log(keyboardObject);
 function sheetMusicObjectConstructor(name, imgFilePath){
   this.name = name;
   this.imgFilePath =imgFilePath;
@@ -52,8 +55,14 @@ sheetMusicObjectConstructor.prototype.render = function(parentId){
 
   parent.appendChild(img);
 };
-// new sheetMusicObjectConstructor(sheetMusicArray[0][0], sheetMusicArray[0][1]);
-// console.log(sheetMusicObject);
-// console.log(sheetMusicArray[0][0]);
-// console.log(sheetMusicObject[sheetMusicArray[0][0]]);
-// sheetMusicObject[sheetMusicArray[0][0]].render('music-sheet');
+new sheetMusicObjectConstructor(sheetMusicArray[0][0], sheetMusicArray[0][1]);
+console.log(sheetMusicObject);
+console.log(sheetMusicArray[0][0]);
+console.log(sheetMusicObject[sheetMusicArray[0][0]]);
+sheetMusicObject[sheetMusicArray[0][0]].render('music-sheet');
+
+(function onPageLoad(){
+  for(var i = 0; i < soundArray.length; i++){
+    new keyboardObjectConstructor(soundArray[i][0], soundArray[i][1]);
+  }
+})();
