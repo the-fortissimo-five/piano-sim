@@ -57,6 +57,17 @@ sheetMusicObjectConstructor.prototype.render = function(parentId){
 };
 new sheetMusicObjectConstructor(sheetMusicArray[0][0], sheetMusicArray[0][1]);
 
+//keydown event listener
+
+var input = document.querySelector('');
+// var log = document.getElementById('log');   --------to be used for history later
+input.addEventListener('keydown', keyLogEventHandler);
+
+function keyLogEventHandler(event){
+  console.log(event);
+  console.log(event.target.id);
+}
+
 
 (function onPageLoad(){
   for(var i = 0; i < soundArray.length; i++){
