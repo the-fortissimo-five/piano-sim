@@ -26,15 +26,15 @@ function keyboardObjectConstructor(name, audioURL, keyName){
   this.audioURL = audioURL;
   this.keyName = keyName;
 
-  keyboardObject[this.name] = this;
+  keyboardObject[this.keyName] = this;
 }
 
 //play prototype
 //-----------------------
-keyboardObjectConstructor.prototype.play = function(keyID){
+keyboardObjectConstructor.prototype.play = function(){
+  var audio = new Audio(this.audioURL);
 
-
-  keyID.play();
+  audio.play();
 };
 // console.log(new keyboardObjectConstructor(soundArray[0], soundArray[1]));
 console.log(keyboardObject);
@@ -65,9 +65,12 @@ var input = document.querySelector('input');
 input.addEventListener('keydown', keyLogEventHandler);
 
 function keyLogEventHandler(event){
-  console.log(event);
+  // console.log(event);
   console.log(event.code);
-  // keyboardObject.
+  // console.log(keyboardObject);
+  console.log(keyboardObject[event.code]);
+  // console.log(keyboardObject[event.code].play());
+  keyboardObject[event.code].play();
 }
 
 
