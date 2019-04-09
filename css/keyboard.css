@@ -23,12 +23,15 @@ header {
 }
 
 .musicSheet {
-  background-color: teal;
   grid-row: 3;
   grid-column: 1 / last;
   justify-self: center;
   height: 250px; 
   width: 500px;
+}
+.musicSheet img{
+  width: 500px;
+  height: auto;
 }
 #keyboardInputContainer {
   grid-column: 1 / last;
