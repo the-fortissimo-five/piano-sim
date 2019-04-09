@@ -1,17 +1,18 @@
 'use strict';
 
 var soundArray = [
-  'aKey', './assets/audio/a.wav', 
-  'bKey', './assets/audio/b.wav',
-  'cKey', './assets/audio/c.wav',
-  'dKey', './assets/audio/d.wav',
-  'eKey', './assets/audio/e.wav',
-  'fKey', './assets/audio/f.wav',
-  'gKey', './assets/audio/g.wav'
+  ['aKey', './assets/audio/a.wav'], 
+  ['bKey', './assets/audio/b.wav'],
+  ['cKey', './assets/audio/c.wav'],
+  ['dKey', './assets/audio/d.wav'],
+  ['eKey', './assets/audio/e.wav'],
+  ['fKey', './assets/audio/f.wav'],
+  ['gKey', './assets/audio/g.wav'],
+  ['highC', './assets/audio/highC.wav']
 ];
 
 var sheetMusicArray = [
-  'odeToJoy', './assets/img/odeDefault.png', './assets/img/odePicked.png',
+  ['odeToJoy', './assets/img/odeDefault.png', './assets/img/odePicked.png'],
 ];
 
 // console.log(soundArray);
@@ -51,5 +52,8 @@ sheetMusicObjectConstructor.prototype.render = function(parentId){
 
   parent.appendChild(img);
 };
-// console.log(new sheetMusicObjectConstructor(sheetMusicArray[1]));
+// new sheetMusicObjectConstructor(sheetMusicArray[0][0], sheetMusicArray[0][1]);
 // console.log(sheetMusicObject);
+// console.log(sheetMusicArray[0][0]);
+// console.log(sheetMusicObject[sheetMusicArray[0][0]]);
+// sheetMusicObject[sheetMusicArray[0][0]].render('music-sheet');
