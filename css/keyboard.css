@@ -12,7 +12,7 @@ header {
   margin: auto;
   text-align: center;
 }
-#piano-keyboard {
+#pianoKeyboard {
   display: grid;
   grid-template: repeat(7, 1fr);
   grid-gap: 5px;
@@ -20,7 +20,7 @@ header {
   width: 80%;
   margin: auto;
 }
-.piano-keys {
+.pianoKeys {
   background-color: ivory;
 }
 #cKey {
