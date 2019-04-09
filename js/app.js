@@ -70,7 +70,15 @@ function keyLogEventHandler(event){
   // console.log(keyboardObject);
   console.log(keyboardObject[event.code]);
   // console.log(keyboardObject[event.code].play());
-  keyboardObject[event.code].play();
+  //keyboardObject[event.code].play();
+  try {
+    keyboardObject[event.code].play();
+  }
+  catch(error){
+    //alert('Lemon Merangue Pie!');
+    console.log('Youentered the wrong key')
+    
+  }
 }
 
 function clearTextField(){
