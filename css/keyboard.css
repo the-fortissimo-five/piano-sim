@@ -1,26 +1,32 @@
-body {
+#mainContainer {
   background-color: wheat;
-  /* display: grid;
-  grid-template: repeat(12, 1fr); */
+  display: grid;
+  grid-template: 50px 50px 250px 500px / repeat(12, 1fr);
+  grid-gap: 5px;
 }
 nav {
-  width: 100%;
+  grid-column: 6 / 8;
   text-align: center;
 }
 header {
-  width: 80%;
-  margin: auto;
   text-align: center;
+  grid-column: 6 / 8;
 }
-#piano-keyboard {
+
+.musicSheet {
+  background-color: teal;
+  grid-column: 4 / span 6;
+  height: 250px; 
+}
+
+#pianoKeyboard {
+  grid-column: 2 / 12;
   display: grid;
-  grid-template: repeat(7, 1fr);
+  grid-template: repeat(8, 1fr);
   grid-gap: 5px;
-  height: 500px;
-  width: 80%;
-  margin: auto;
+  height: 100%;
 }
-.piano-keys {
+.pianoKeys {
   background-color: ivory;
 }
 #cKey {
@@ -42,5 +48,8 @@ header {
   grid-column: 6 / 7;
 }
 #bKey {
-  grid-column: 7 / 7;
+  grid-column: 7 / 8;
+}
+#highCKey {
+  grid-column: 8 / 8;
 }
