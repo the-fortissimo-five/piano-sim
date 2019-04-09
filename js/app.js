@@ -12,7 +12,7 @@ var soundArray = [
 
 var sheetMusicArray = [
   'odeToJoy', './assets/img/odeDefault.jpg', './assets/img/odePicked.jpg',
-]
+];
 
 console.log(soundArray);
 console.log(sheetMusicArray);
