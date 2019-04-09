@@ -1,0 +1,35 @@
+#main-container {
+  background-color: black;
+  display: grid;
+  grid-template: repeat(12, 1fr);
+}
+#piano-keyboard {
+  display: grid;
+  grid-template: repeat(7, 1fr);
+  grid-gap: 5px;
+  height: 10px;
+}
+.piano-keys {
+  background-color: ivory;
+}
+#cKey {
+  grid-column: 0 / 1;
+}
+#dKey {
+  grid-column: 1 / 2;
+}
+#eKey {
+  grid-column: 2 / 3;
+}
+#fKey {
+  grid-column: 3 / 4;
+}
+#gKey {
+  grid-column: 4 / 5;
+}
+#aKey {
+  grid-column: 5 / 6;
+}
+#bKey {
+  grid-column: 6 / 7;
+}
