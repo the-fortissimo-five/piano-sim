@@ -1,35 +1,46 @@
-#main-container {
-  background-color: black;
-  display: grid;
-  grid-template: repeat(12, 1fr);
+body {
+  background-color: wheat;
+  /* display: grid;
+  grid-template: repeat(12, 1fr); */
+}
+nav {
+  width: 100%;
+  text-align: center;
+}
+header {
+  width: 80%;
+  margin: auto;
+  text-align: center;
 }
 #piano-keyboard {
   display: grid;
   grid-template: repeat(7, 1fr);
   grid-gap: 5px;
-  height: 10px;
+  height: 500px;
+  width: 80%;
+  margin: auto;
 }
 .piano-keys {
   background-color: ivory;
 }
 #cKey {
-  grid-column: 0 / 1;
-}
-#dKey {
   grid-column: 1 / 2;
 }
-#eKey {
+#dKey {
   grid-column: 2 / 3;
 }
-#fKey {
+#eKey {
   grid-column: 3 / 4;
 }
-#gKey {
+#fKey {
   grid-column: 4 / 5;
 }
-#aKey {
+#gKey {
   grid-column: 5 / 6;
 }
-#bKey {
+#aKey {
   grid-column: 6 / 7;
+}
+#bKey {
+  grid-column: 7 / 7;
 }
