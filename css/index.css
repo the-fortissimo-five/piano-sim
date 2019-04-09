@@ -1,7 +1,7 @@
 #mainContainer {
   background-color: wheat;
   display: grid;
-  grid-template: 75px 100px 250px 250px / repeat(12, 1fr);
+  grid-template: 75px 100px 250px 250px 1fr/ repeat(12, 1fr);
   grid-gap: 5px;
 }
 nav {
