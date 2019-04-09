@@ -1,7 +1,7 @@
 #mainContainer {
   background-color: wheat;
   display: grid;
-  grid-template: 75px 50px 250px 500px 1fr / repeat(12, 1fr);
+  grid-template: 75px 50px 250px 275px 1fr / repeat(12, 1fr);
   grid-gap: 5px;
 }
 nav {
@@ -12,7 +12,7 @@ nav {
 nav p {
   display: inline-block;
   font-size: 20px;
-  padding: 20px 100px;
+  padding: 10px 100px;
   border: 5px outset black;
   margin: 0px -2px;
   background-color: peachpuff;
@@ -30,7 +30,7 @@ header {
   height: 250px; 
   width: 500px;
 }
-#keyboardInput {
+#keyboardInputContainer {
   grid-column: 1 / last;
   grid-row: 5;
   justify-self: center;
@@ -39,9 +39,10 @@ header {
   grid-column: 2 / 12;
   grid-row: 4;
   display: grid;
-  grid-template: repeat(8, 1fr);
+  grid-template-columns: repeat(8, 8%);
   grid-gap: 5px;
   height: 100%;
+  justify-content: center;
 }
 .pianoKeys {
   background-color: ivory;
