@@ -1,14 +1,14 @@
 'use strict';
 
 var soundArray = [
-  ['aKey', './assets/audio/a.wav'], 
-  ['bKey', './assets/audio/b.wav'],
-  ['cKey', './assets/audio/c.wav'],
-  ['dKey', './assets/audio/d.wav'],
-  ['eKey', './assets/audio/e.wav'],
-  ['fKey', './assets/audio/f.wav'],
-  ['gKey', './assets/audio/g.wav'],
-  ['highC', './assets/audio/highC.wav']
+  ['aKey', './assets/audio/a.wav', 'KeyL'],
+  ['bKey', './assets/audio/b.wav', 'Space'],
+  ['cKey', './assets/audio/c.wav', 'KeyS'],
+  ['dKey', './assets/audio/d.wav', 'KeyD'],
+  ['eKey', './assets/audio/e.wav', 'KeyF'],
+  ['fKey', './assets/audio/f.wav', 'KeyJ'],
+  ['gKey', './assets/audio/g.wav', 'KeyK'],
+  ['highC', './assets/audio/highC.wav', 'Semicolon']
 ];
 
 var sheetMusicArray = [
@@ -21,9 +21,10 @@ var sheetMusicArray = [
 var keyboardObject = {};
 var sheetMusicObject = {};
 
-function keyboardObjectConstructor(name, audioURL){
+function keyboardObjectConstructor(name, audioURL, keyName){
   this.name = name;
   this.audioURL = audioURL;
+  this.keyName = keyName;
 
   keyboardObject[this.name] = this;
 }
@@ -51,7 +52,7 @@ sheetMusicObjectConstructor.prototype.render = function(parentId){
   var img = document.createElement('img');
   img.setAttribute('id', this.name);
   img.setAttribute('src', this.imgFilePath);
-  img.setAttribute('class', 'sheetMusic');  //delete later if we don't end up using
+  img.setAttribute('class', 'sheetMusic'); //delete later if we don't end up using
 
   parent.appendChild(img);
 };
@@ -59,19 +60,20 @@ new sheetMusicObjectConstructor(sheetMusicArray[0][0], sheetMusicArray[0][1]);
 
 //keydown event listener
 
-var input = document.querySelector('');
+var input = document.querySelector('input');
 // var log = document.getElementById('log');   --------to be used for history later
 input.addEventListener('keydown', keyLogEventHandler);
 
 function keyLogEventHandler(event){
   console.log(event);
-  console.log(event.target.id);
+  console.log(event.code);
+  // keyboardObject.
 }
 
 
 (function onPageLoad(){
   for(var i = 0; i < soundArray.length; i++){
-    new keyboardObjectConstructor(soundArray[i][0], soundArray[i][1]);
+    new keyboardObjectConstructor(soundArray[i][0], soundArray[i][1], soundArray[i][2]);
   }
 })();
 
