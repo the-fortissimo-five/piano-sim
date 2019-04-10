@@ -1,22 +1,31 @@
+body {
+  background-image: url("../assets/img/musicSheetBackground.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 #mainContainer {
-  background-color: wheat;
   display: grid;
   grid-template: 75px 50px 250px 275px 1fr / repeat(12, 1fr);
   grid-gap: 5px;
 }
+
 nav {
   grid-column: 1 / last;
   grid-row: 1;
   justify-self: center;
 }
+
 nav p {
   display: inline-block;
-  font-size: 20px;
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
   padding: 10px 100px;
-  border: 5px outset black;
+  border: 1px outset black;
   margin: 0px -2px;
-  background-color: peachpuff;
+  background-color: rgb(214, 204, 191);
 }
+
 header {
   text-align: center;
   grid-column: 6 / 8;
@@ -48,7 +57,8 @@ header {
   justify-content: center;
 }
 .pianoKeys {
-  background-color: ivory;
+  background-color: rgb(235, 229, 181);
+  border: 1px outset rgb(214, 208, 164);
 }
 #cKey {
   grid-column: 1 / 2;
