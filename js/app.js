@@ -70,7 +70,6 @@ function getStateFromLocalStorage(){
   new SheetMusicObjectConstructor(STATE_OBJ.name, STATE_OBJ.imgFilePath);
 }
 (function onPageLoad(){
-  debugger;
   if(localStorage[STATE_KEY]){
     getStateFromLocalStorage();
     sheetMusicObject[STATE_OBJ.name].render(`item${0}`);
