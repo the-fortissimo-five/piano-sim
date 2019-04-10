@@ -52,7 +52,9 @@ header {
 #log {
   margin-left: 5px;
   height: 245px;
+  max-height: 245px;
   width: 230px;
+  max-width: 450px;
   background-color: #fcfcff;
 }
 
