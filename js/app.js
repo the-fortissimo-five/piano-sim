@@ -64,13 +64,26 @@ SheetMusicObjectConstructor.prototype.render = function(parentId){
 function setStateToLocalStorage(){
   localStorage.setItem(STATE_KEY, JSON.stringify(STATE_OBJ));
 }
-
+function getStateFromLocalStorage(){
+  var rawState = localStorage.getItem(STATE_KEY);
+  STATE_OBJ = JSON.parse(rawState);
+  new SheetMusicObjectConstructor(STATE_OBJ.name, STATE_OBJ.imgFilePath);
+}
 (function onPageLoad(){
+  debugger;
+  if(localStorage[STATE_KEY]){
+    getStateFromLocalStorage();
+    sheetMusicObject[STATE_OBJ.name].render(`item${0}`);
+    console.log(sheetMusicObject);
+  } else{
+    new SheetMusicObjectConstructor(sheetMusicArray[0][0], sheetMusicArray[0][1]);
+    sheetMusicObject[sheetMusicArray[0][0]].render(`item${0}`);
+  }
+
   for(var i = 0; i < soundArray.length; i++){
     new KeyboardObjectConstructor(soundArray[i][0], soundArray[i][1], soundArray[i][2]);
   }
-  new SheetMusicObjectConstructor(sheetMusicArray[0][0], sheetMusicArray[0][1]);
-  sheetMusicObject[sheetMusicArray[0][0]].render(`item${0}`);
+  
 })();
 
 console.log(sheetMusicObject);
