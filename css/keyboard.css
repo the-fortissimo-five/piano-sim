@@ -61,6 +61,8 @@ header {
   border: 1px outset rgb(214, 208, 164);
 }
 .played {
+  transition: all .25s ease;
+  transform: scale(.85);
   background-color:red;
   border: 3px outset black;
 }
