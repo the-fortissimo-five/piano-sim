@@ -4,15 +4,29 @@
 
 .musicSheet {
   grid-row: 3;
-  grid-column: 1 / last;
-  justify-self: center;
+  grid-column: 4 / 8;
+  /* justify-self: center; */
   height: 250px; 
   width: 500px;
 }
+
 .musicSheet img{
   width: 500px;
   height: auto;
 }
+
+.logDisplay {
+  grid-row: 3;
+  grid-column: 8 /11;
+
+}
+#log {
+  margin-left: 5px;
+  height: 245px;
+  width: 230px;
+  background-color: #fcfcff;
+}
+
 #keyboardInputContainer {
   grid-column: 1 / last;
   grid-row: 5;
@@ -32,6 +46,8 @@
   border: 1px outset rgb(214, 208, 164);
 }
 .played {
+  transition: all .25s ease;
+  transform: scale(.85);
   background-color:red;
   border: 3px outset black;
 }
@@ -56,6 +72,7 @@
 }
 #bKey {
   grid-column: 7 / 8;
+  text-align: left;
 }
 #highCKey {
   grid-column: 8 / 8;
@@ -67,4 +84,8 @@
   padding: 10px;
   border-radius: 10px;
   border: 1.5px solid black;
+}
+
+#bKey p {
+margin: 200px 19% 0px;
 }
