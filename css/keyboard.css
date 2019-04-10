@@ -60,9 +60,14 @@ header {
   background-color: rgb(235, 229, 181);
   border: 1px outset rgb(214, 208, 164);
 }
+.played {
+  background-color:red;
+  border: 3px outset black;
+}
 #cKey {
   grid-column: 1 / 2;
 }
+
 #dKey {
   grid-column: 2 / 3;
 }
