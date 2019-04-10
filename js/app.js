@@ -20,7 +20,7 @@ var sheetMusicArray = [
 // console.log(sheetMusicArray);
 var keyboardObject = {};
 var sheetMusicObject = {};
-var container = document.getElementById('mainContainer');
+var container = document.getElementById('musicSheetWrapper');
 console.log(container);
 var input = document.querySelector('input');
 
@@ -76,7 +76,7 @@ new SheetMusicObjectConstructor(sheetMusicArray[0][0], sheetMusicArray[0][1]);
   for(var i = 0; i < soundArray.length; i++){
     new KeyboardObjectConstructor(soundArray[i][0], soundArray[i][1], soundArray[i][2]);
   }
-  sheetMusicObject[sheetMusicArray[0][0]].render(`item_${0}`);
+  sheetMusicObject[sheetMusicArray[0][0]].render(`item${0}`);
 })();
 // console.log(sheetMusicObject);
 // console.log(sheetMusicArray[0][0]);
