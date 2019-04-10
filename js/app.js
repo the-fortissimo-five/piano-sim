@@ -16,13 +16,14 @@ var sheetMusicArray = [
   ['cmajor', './assets/img/cmajorDefault.jpg', './assets/img/cmajorPicked.jpg']
 ];
 
-// console.log(soundArray);
-// console.log(sheetMusicArray);
 var keyboardObject = {};
 var sheetMusicObject = {};
-var container = document.getElementById('mainContainer');
-console.log(container);
+
+var container = document.getElementById('musicSheetWrapper');
 var input = document.querySelector('input');
+
+var STATE_KEY = 'sheetMusicState';
+var STATE_OBJ = {};
 
 function KeyboardObjectConstructor(name, audioURL, keyName){
   this.name = name;
@@ -59,21 +60,17 @@ SheetMusicObjectConstructor.prototype.render = function(parentId){
 
   parent.appendChild(img);
 };
-new SheetMusicObjectConstructor(sheetMusicArray[0][0], sheetMusicArray[0][1]);
 
-// Working on click event handler
-// function handleClick(event) {
-//   event.preventDefault();
-//   console.log(event);
-//   if(event.target.className === 'indexPageMusicSheet'){
-//     console.log('Hi');
-//   }
+function setStateToLocalStorage(){
+  localStorage.setItem(STATE_KEY, JSON.stringify(STATE_OBJ));
+}
 
-// }
-// container.addEventListener('click', handleClick);
-
+(function onPageLoad(){
+  for(var i = 0; i < soundArray.length; i++){
+    new KeyboardObjectConstructor(soundArray[i][0], soundArray[i][1], soundArray[i][2]);
+  }
+  new SheetMusicObjectConstructor(sheetMusicArray[0][0], sheetMusicArray[0][1]);
+  sheetMusicObject[sheetMusicArray[0][0]].render(`item${0}`);
+})();
 
 console.log(sheetMusicObject);
-console.log(sheetMusicArray[0][0]);
-console.log(sheetMusicObject[sheetMusicArray[0][0]]);
-sheetMusicObject[sheetMusicArray[0][0]].render(`item_${0}`);
