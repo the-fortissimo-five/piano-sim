@@ -20,8 +20,11 @@ var sheetMusicArray = [
 // console.log(sheetMusicArray);
 var keyboardObject = {};
 var sheetMusicObject = {};
+var container = document.getElementById('music');
+console.log(container);
+// var input = document.querySelector('input');
 
-function keyboardObjectConstructor(name, audioURL, keyName){
+function KeyboardObjectConstructor(name, audioURL, keyName){
   this.name = name;
   this.audioURL = audioURL;
   this.keyName = keyName;
@@ -31,14 +34,14 @@ function keyboardObjectConstructor(name, audioURL, keyName){
 
 //play prototype
 //-----------------------
-keyboardObjectConstructor.prototype.play = function(){
+KeyboardObjectConstructor.prototype.play = function(){
   var audio = new Audio(this.audioURL);
 
   audio.play();
 };
 // console.log(new keyboardObjectConstructor(soundArray[0], soundArray[1]));
 console.log(keyboardObject);
-function sheetMusicObjectConstructor(name, imgFilePath){
+function SheetMusicObjectConstructor(name, imgFilePath){
   this.name = name;
   this.imgFilePath =imgFilePath;
 
@@ -46,7 +49,7 @@ function sheetMusicObjectConstructor(name, imgFilePath){
 }
 //render prototype
 //----------------------
-sheetMusicObjectConstructor.prototype.render = function(parentId){
+SheetMusicObjectConstructor.prototype.render = function(parentId){
   var parent = document.getElementById(parentId);
 
   var img = document.createElement('img');
@@ -56,13 +59,11 @@ sheetMusicObjectConstructor.prototype.render = function(parentId){
 
   parent.appendChild(img);
 };
-new sheetMusicObjectConstructor(sheetMusicArray[0][0], sheetMusicArray[0][1]);
+new SheetMusicObjectConstructor(sheetMusicArray[0][0], sheetMusicArray[0][1]);
 
 //keydown event listener
-
-var input = document.querySelector('input');
 // var log = document.getElementById('log');   --------to be used for history later
-input.addEventListener('keydown', keyLogEventHandler);
+// input.addEventListener('keydown', keyLogEventHandler);
 
 function keyLogEventHandler(event){
   // console.log(event);
@@ -76,18 +77,28 @@ function keyLogEventHandler(event){
   }
   catch(error){
     //alert('Lemon Merangue Pie!');
-    console.log('Youentered the wrong key')
-    
+    console.log('You entered the wrong key');
   }
 }
+// Working on click event handler
+function handleClick(event) {
+  event.preventDefault();
+  console.log(event);
+  if(event.target.className === 'indexPageMusicSheet'){
+    console.log('Hi');
+  }
 
+}
+container.addEventListener('click', handleClick);
+
+//Called in HTML ignore Squiggles
 function clearTextField(){
-  document.getElementById('keyboardInput').value = ''
+  document.getElementById('keyboardInput').value = '';
 }
 
 (function onPageLoad(){
   for(var i = 0; i < soundArray.length; i++){
-    new keyboardObjectConstructor(soundArray[i][0], soundArray[i][1], soundArray[i][2]);
+    new KeyboardObjectConstructor(soundArray[i][0], soundArray[i][1], soundArray[i][2]);
   }
 })();
 
