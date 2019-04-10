@@ -35,3 +35,7 @@ input.addEventListener('keydown', changeTheNameOfThisFunction);
 function clearTextField(){
   document.getElementById('keyboardInput').value = '';
 }
+
+function clearHistoryField(){
+  log.textContent = '';
+}
