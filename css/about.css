@@ -1,5 +1,7 @@
 body {
-  background-color: wheat;
+  background-image: url("../assets/img/musicSheetBackground.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #mainContainer {
@@ -29,23 +31,43 @@ header {
   width: auto;
   justify-self: center;
 }
+
+#ed p, #felipe p, #chloie p, #conor p, #jeff p{
+  font-size: 19px;
+}
+#ed img, #chloie img, #jeff img{
+  float: left;
+  padding-right: 15px;
+}
+
+#felipe img, #conor img{
+  float: right;
+  padding-left: 15px;
+}
+
 #ed{
 grid-row: 3;
-grid-column: 1 / last;
+grid-column: 3 / 6;
+padding-bottom: 50px;
 }
+
+
 #felipe{
-grid-row: 4;
-grid-column: 1 / last;
+grid-row: 3;
+grid-column: 8 / 11;
 }
+
 #chloie{
-grid-row: 5;
-grid-column: 1 / last;
+grid-row: 4;
+grid-column: 3 / 6;
 }
+
 #conor{
-grid-row: 6;
-grid-column: 1 / last;
+grid-row: 4;
+grid-column: 8 / 11;
 }
+
 #jeff{
-grid-row: 7;
-grid-column: 1 / last;
+grid-row: 5;
+grid-column: 3 / 6;
 }
