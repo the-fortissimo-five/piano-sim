@@ -72,8 +72,13 @@ new SheetMusicObjectConstructor(sheetMusicArray[0][0], sheetMusicArray[0][1]);
 // }
 // container.addEventListener('click', handleClick);
 
-
-console.log(sheetMusicObject);
-console.log(sheetMusicArray[0][0]);
-console.log(sheetMusicObject[sheetMusicArray[0][0]]);
-sheetMusicObject[sheetMusicArray[0][0]].render(`item_${0}`);
+(function onPageLoad(){
+  for(var i = 0; i < soundArray.length; i++){
+    new KeyboardObjectConstructor(soundArray[i][0], soundArray[i][1], soundArray[i][2]);
+  }
+  sheetMusicObject[sheetMusicArray[0][0]].render(`item_${0}`);
+})();
+// console.log(sheetMusicObject);
+// console.log(sheetMusicArray[0][0]);
+// console.log(sheetMusicObject[sheetMusicArray[0][0]]);
+// sheetMusicObject[sheetMusicArray[0][0]].render(`item_${0}`);
