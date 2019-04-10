@@ -16,13 +16,19 @@ function keyLogEventHandler(event){
     console.log('You entered the wrong key');
   }
 }
+function transitionReset (){
+  //debugger;
+  //console.log('Hello from transition end');
+  var keys = document.getElementById('cKey').className = 'pianoKeys';
+
+}
 function changeTheNameOfThisFunction(event) {
   // event.target.classList.remove('pianoKeys');
-  var keys = document.getElementById('cKey');
-  var keyClassName = keys.className;
-  console.log(keyClassName);
-  keyClassName = 'played';
-  console.log(keyClassName);
+
+  var keys = document.getElementById('cKey').className = 'played';
+  var transition = document.querySelector('.played');
+  transition.addEventListener('transitionend', transitionReset);
+
 
 }
 //keydown event listener
