@@ -1,0 +1,76 @@
+#mainContainer {
+  background-color: wheat;
+  display: grid;
+  grid-template: 75px 50px 250px 275px 1fr / repeat(12, 1fr);
+  grid-gap: 5px;
+}
+nav {
+  grid-column: 1 / last;
+  grid-row: 1;
+  justify-self: center;
+}
+nav p {
+  display: inline-block;
+  font-size: 20px;
+  padding: 10px 100px;
+  border: 5px outset black;
+  margin: 0px -2px;
+  background-color: peachpuff;
+}
+header {
+  text-align: center;
+  grid-column: 6 / 8;
+}
+
+.musicSheet {
+  grid-row: 3;
+  grid-column: 1 / last;
+  justify-self: center;
+  height: 250px; 
+  width: 500px;
+}
+.musicSheet img{
+  width: 500px;
+  height: auto;
+}
+#keyboardInputContainer {
+  grid-column: 1 / last;
+  grid-row: 5;
+  justify-self: center;
+}
+#pianoKeyboard {
+  grid-column: 2 / 12;
+  grid-row: 4;
+  display: grid;
+  grid-template-columns: repeat(8, 8%);
+  grid-gap: 5px;
+  height: 100%;
+  justify-content: center;
+}
+.pianoKeys {
+  background-color: ivory;
+}
+#cKey {
+  grid-column: 1 / 2;
+}
+#dKey {
+  grid-column: 2 / 3;
+}
+#eKey {
+  grid-column: 3 / 4;
+}
+#fKey {
+  grid-column: 4 / 5;
+}
+#gKey {
+  grid-column: 5 / 6;
+}
+#aKey {
+  grid-column: 6 / 7;
+}
+#bKey {
+  grid-column: 7 / 8;
+}
+#highCKey {
+  grid-column: 8 / 8;
+}

@@ -5,14 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Keyboard</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/keyboard.css">
 </head>
 <body>
-    <div id="main-container">
+    <div id="mainContainer">
         <nav>
-          <p id="current-page">Keyboard</p>
-          <a href="index.html">Sheet Music</a>
-          <a href="about.html">About-Us</a>
+          <p id="currentPage">Keyboard</p>
+          <p><a href="index.html">Sheet Music</a></p>
+          <p><a href="about.html">About-Us</a></p>
         </nav>
+        <header>
+          <h1>Keyboard Sim</h1>
+          <p>Instructions: Use your keyboard to practice piano music!</p>
+        </header>
+        <section class="musicSheet" id="item_0">
+        </section>
+        <section id="pianoKeyboard">
+          <div class="pianoKeys" id="cKey"></div>
+          <div class="pianoKeys" id="dKey"></div>
+          <div class="pianoKeys" id="eKey"></div>
+          <div class="pianoKeys" id="fKey"></div>
+          <div class="pianoKeys" id="gKey"></div>
+          <div class="pianoKeys" id="aKey"></div>
+          <div class="pianoKeys" id="bKey"></div>
+          <div class="pianoKeys" id="highCKey"></div>
+        </section>
+        <section id="keyboardInputContainer">
+          <input id="keyboardInput" type="text" placeholder="Click here to play!">
+          <button onclick="clearTextField()">Clear</button>
+        </section>
       </div>
       <script src="./js/app.js"></script>
 </body>
