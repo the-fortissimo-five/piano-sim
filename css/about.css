@@ -1,5 +1,8 @@
-#mainContainer {
+body {
   background-color: wheat;
+}
+
+#mainContainer {
   display: grid;
   grid-template: 75px 50px repeat(7, 1fr) / repeat(12, 1fr);
   grid-gap: 5px;
