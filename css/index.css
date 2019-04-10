@@ -1,9 +1,15 @@
+body {
+  background-image: url("../assets/img/musicSheetBackground.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 #mainContainer {
-  background-color: wheat;
   display: grid;
   grid-template: 75px 100px 250px 250px 1fr/ repeat(12, 1fr);
   grid-gap: 5px;
 }
+
 nav {
   grid-column: 1 / last;
   grid-row: 1;
@@ -11,11 +17,12 @@ nav {
 }
 nav p {
   display: inline-block;
-  font-size: 20px;
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
   padding: 10px 100px;
-  border: 5px outset black;
+  border: 1px outset black;
   margin: 0px -2px;
-  background-color: peachpuff;
+  background-color: rgb(214, 204, 191);
 }
 header {
   text-align: center;
@@ -26,6 +33,11 @@ header {
 section img {
   width: 500px;
   height: auto;
+}
+
+#musicSheetWrapper{
+  grid-column: 5 / 9;
+  grid-row: 3;
 }
 
 #item_0 {
