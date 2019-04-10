@@ -20,9 +20,9 @@ var sheetMusicArray = [
 // console.log(sheetMusicArray);
 var keyboardObject = {};
 var sheetMusicObject = {};
-var container = document.getElementById('music');
+var container = document.getElementById('mainContainer');
 console.log(container);
-// var input = document.querySelector('input');
+var input = document.querySelector('input');
 
 function KeyboardObjectConstructor(name, audioURL, keyName){
   this.name = name;
@@ -61,46 +61,17 @@ SheetMusicObjectConstructor.prototype.render = function(parentId){
 };
 new SheetMusicObjectConstructor(sheetMusicArray[0][0], sheetMusicArray[0][1]);
 
-//keydown event listener
-// var log = document.getElementById('log');   --------to be used for history later
-// input.addEventListener('keydown', keyLogEventHandler);
-
-function keyLogEventHandler(event){
-  // console.log(event);
-  console.log(event.code);
-  // console.log(keyboardObject);
-  console.log(keyboardObject[event.code]);
-  // console.log(keyboardObject[event.code].play());
-  //keyboardObject[event.code].play();
-  try {
-    keyboardObject[event.code].play();
-  }
-  catch(error){
-    //alert('Lemon Merangue Pie!');
-    console.log('You entered the wrong key');
-  }
-}
 // Working on click event handler
-function handleClick(event) {
-  event.preventDefault();
-  console.log(event);
-  if(event.target.className === 'indexPageMusicSheet'){
-    console.log('Hi');
-  }
+// function handleClick(event) {
+//   event.preventDefault();
+//   console.log(event);
+//   if(event.target.className === 'indexPageMusicSheet'){
+//     console.log('Hi');
+//   }
 
-}
-container.addEventListener('click', handleClick);
+// }
+// container.addEventListener('click', handleClick);
 
-//Called in HTML ignore Squiggles
-function clearTextField(){
-  document.getElementById('keyboardInput').value = '';
-}
-
-(function onPageLoad(){
-  for(var i = 0; i < soundArray.length; i++){
-    new KeyboardObjectConstructor(soundArray[i][0], soundArray[i][1], soundArray[i][2]);
-  }
-})();
 
 console.log(sheetMusicObject);
 console.log(sheetMusicArray[0][0]);
