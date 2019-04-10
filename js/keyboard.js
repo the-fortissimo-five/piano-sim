@@ -6,14 +6,8 @@ function keyLogEventHandler(event){
   // console.log(event);
   // console.log(event.code);
   // console.log(keyboardObject);
-  
-  // console.log(keyboardObject[event.code]);
-  // console.log(keyboardObject[event.code].play());
-  //keyboardObject[event.code].play();
-  /*if (event.code === 'keyS'){
-    var code = event.code;
-    
-  }*/
+
+  log.textContent += ` ${event.code}`;
   try {
     keyboardObject[event.code].play();
   }
@@ -29,10 +23,10 @@ function changeTheNameOfThisFunction(event) {
   console.log(keyClassName);
   keyClassName = 'played';
   console.log(keyClassName);
-  
+
 }
 //keydown event listener
-   //--------to be used for history later
+//--------to be used for history later
 
 
 input.addEventListener('keydown', keyLogEventHandler);
