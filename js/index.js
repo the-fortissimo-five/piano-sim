@@ -1,3 +1,5 @@
+'use strict';
+
 function handleClick(event) {
   event.preventDefault();
   // console.log(event);

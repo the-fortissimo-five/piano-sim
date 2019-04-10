@@ -1,8 +1,13 @@
+'use strict';
+
+var log = document.getElementById('log');
+
 function keyLogEventHandler(event){
   // console.log(event);
-  console.log(event.code);
+  // console.log(event.code);
   // console.log(keyboardObject);
-  console.log(keyboardObject[event.code]);
+  
+  // console.log(keyboardObject[event.code]);
   // console.log(keyboardObject[event.code].play());
   //keyboardObject[event.code].play();
   /*if (event.code === 'keyS'){
@@ -27,7 +32,9 @@ function changeTheNameOfThisFunction(event) {
   
 }
 //keydown event listener
-var log = document.getElementById('log');   //--------to be used for history later
+   //--------to be used for history later
+
+
 input.addEventListener('keydown', keyLogEventHandler);
 input.addEventListener('keydown', changeTheNameOfThisFunction);
 
