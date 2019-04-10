@@ -55,7 +55,7 @@
 }
 
 .played {
-  transition: all .25s ease;
+  transition: all 1s ease;
   transform: scale(.85);
   background-color:red;
   border: 3px outset black;

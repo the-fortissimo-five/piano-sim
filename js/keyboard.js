@@ -16,18 +16,21 @@ function keyLogEventHandler(event){
     console.log('You entered the wrong key');
   }
 }
-function transitionReset (){
-  //debugger;
+function transitionReset (event){
+  console.log(event);
+  // debugger;
   //console.log('Hello from transition end');
-  var keys = document.getElementById('cKey').className = 'pianoKeys';
-
+  setTimeout(function(){document.getElementById(keyboardObject[event.code].name).className = 'pianoKeys';
+  }, 1000);
+  console.log(keyboardObject[event.code].name);
+  console.log((keyboardObject[event.code].name).className);
 }
 function changeTheNameOfThisFunction(event) {
   // event.target.classList.remove('pianoKeys');
-
-  var keys = document.getElementById('cKey').className = 'played';
+  console.log(keyboardObject[event.code].name);
+  document.getElementById(keyboardObject[event.code].name).className = 'played';
   var transition = document.querySelector('.played');
-  transition.addEventListener('transitionend', transitionReset);
+  transition.addEventListener('transitionend',transitionReset(event));
 
 
 }
