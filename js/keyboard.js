@@ -27,6 +27,7 @@ function transitionReset (event){
 }
 function changeTheNameOfThisFunction(event) {
   // event.target.classList.remove('pianoKeys');
+  console.log(keyboardObject[event.code].name);
   document.getElementById(keyboardObject[event.code].name).className = 'played';
   var transition = document.querySelector('.played');
   transition.addEventListener('transitionend',transitionReset(event));
