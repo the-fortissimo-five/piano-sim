@@ -1,5 +1,5 @@
 #mainContainer {
-  grid-template-rows: 50px 100px  1fr 250px 1fr;
+  grid-template-rows: 50px 100px  1fr;
 }
 
 section img {
