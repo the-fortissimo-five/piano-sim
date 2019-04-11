@@ -18,7 +18,19 @@ reset.css\
 eslint.json
 
 ## Domain
-Makes learning notes on the piano funa using a pc. Makes keyboarding more interactive using piano keys.
+Makes learning notes on the piano fun using a pc. Makes keyboarding more interactive using piano keys.\
+
+## Licensing/Attribution
+This project uses these sounds from freesound.org:\
+piano normal d4.wav by Teddy_Frost (https://freesound.org/people/Teddy_Frost/sounds/334536/)\
+c.wav by ramas26 (https://freesound.org/people/ramas26/sounds/95328/)\
+e.wav by ramas26 (https://freesound.org/people/ramas26/sounds/95330/)\
+f.wav by ramas26 (https://freesound.org/people/ramas26/sounds/95331/)\
+g.wav by ramas26 (https://freesound.org/people/ramas26/sounds/95332/)\
+a.wav by ramas26 (https://freesound.org/people/ramas26/sounds/95326/)\
+b.wav by ramas26 (https://freesound.org/people/ramas26/sounds/95327/)\
+c5.wav by Teddy_Frost (https://freesound.org/people/Teddy_Frost/sounds/334537/)\
+All of these sounds are licensed using the Creative Commons Public Domain Dedication License. Learn more here: https://creativecommons.org/publicdomain/zero/1.0/
 
 ### MVP1:
 * About Us Page
@@ -51,6 +63,4 @@ Makes learning notes on the piano funa using a pc. Makes keyboarding more intera
 * Write Music
 * Sound board
 * On-Mouse-Click
-
-### Currently Unassigned Stretch Goals
-* As a user, I want some sort of validation that I have pressed the right keys that are located on the music sheet
+* Correct Keypress Validation
