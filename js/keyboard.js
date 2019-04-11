@@ -8,7 +8,7 @@ var VALID_CHARACTERS = ['S', 'D', 'F', 'J', 'K', 'L', '_', ';'];
 var VALID_CODE_KEYS = ['KeyL', 'Space', 'KeyS', 'KeyD', 'KeyF', 'KeyJ', 'KeyK', 'Semicolon'];
 
 //---------------------------
-//function to limit display of characters in history log
+//Function to limit display of characters in history log
 //---------------------------
 function limitCharacterlength(stringOfCharacters) {
   if (stringOfCharacters.length > CHARACTER_DISPLAY_LENGTH) {
@@ -18,7 +18,7 @@ function limitCharacterlength(stringOfCharacters) {
 }
 
 //---------------------------
-//function to log keys pressed and add to history log
+//Function to log keys pressed and add to history log
 //---------------------------
 function addToTracker(keyPressed){
   keyPressed = keyPressed.toUpperCase();
@@ -35,7 +35,7 @@ function addToTracker(keyPressed){
 }
 
 //----------------------------
-//function key log event handler to activate play function in app.js
+//Function key log event handler to activate play function in app.js
 //----------------------------
 function keyLogEventHandler(event){
   addToTracker(event.key);
@@ -45,11 +45,16 @@ function keyLogEventHandler(event){
 }
 
 //----------------------------
+//Function to reset element class after transition event in css
+//----------------------------
 function transitionReset (event){
   setTimeout(function(){document.getElementById(keyboardObject[event.code].name).className = 'pianoKeys';
   }, 1000);
 }
 
+//----------------------------
+//Function to change element class to fire css transition event
+//----------------------------
 function changeTheNameOfThisFunction(event) {
   if (VALID_CODE_KEYS.includes(event.code)) {
     document.getElementById(keyboardObject[event.code].name).className = 'played';

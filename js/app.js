@@ -1,5 +1,8 @@
 'use strict';
 
+//-----------------------------
+//Array containing the different key sounds
+//-----------------------------
 var soundArray = [
   ['aKey', './assets/audio/a.wav', 'KeyL'],
   ['bKey', './assets/audio/b.wav', 'Space'],
@@ -11,11 +14,17 @@ var soundArray = [
   ['highC', './assets/audio/highC.wav', 'Semicolon'],
 ];
 
+//-------------------------------
+//Array containing the different music sheets
+//-------------------------------
 var sheetMusicArray = [
   ['odeToJoy', './assets/img/odeDefault.jpg', './assets/img/odePicked.jpg'],
   ['cmajor', './assets/img/cmajorDefault.jpg', './assets/img/cmajorPicked.jpg'],
 ];
 
+//-------------------------------
+//Global variables
+//-------------------------------
 var keyboardObject = {};
 var sheetMusicObject = {};
 
@@ -25,6 +34,10 @@ var input = document.querySelector('input');
 var STATE_KEY = 'sheetMusicState';
 var STATE_OBJ = {};
 
+//-------------------------------
+//Keyboard object constructor function
+//-------------------------------
+
 function KeyboardObjectConstructor(name, audioURL, keyName){
   this.name = name;
   this.audioURL = audioURL;
@@ -33,33 +46,37 @@ function KeyboardObjectConstructor(name, audioURL, keyName){
   keyboardObject[this.keyName] = this;
 }
 
-//play prototype
-//-----------------------
+//-------------------------------
+//Keyboard object constructor prototype play function
+//-------------------------------
 KeyboardObjectConstructor.prototype.play = function(){
   var audio = new Audio(this.audioURL);
 
   audio.play();
 };
 
+//--------------------------------
+//Build the keyboard object
+//--------------------------------
 for(var i = 0; i < soundArray.length; i++){
   new KeyboardObjectConstructor(soundArray[i][0], soundArray[i][1], soundArray[i][2]);
 }
-// console.log(new keyboardObjectConstructor(soundArray[0], soundArray[1]));
-// console.log(keyboardObject);
+
+//--------------------------------
+//Sheet music object constructor function
+//--------------------------------
 function SheetMusicObjectConstructor(name, imgFilePath, pickedFilePath){
 
   this.name = name;
   this.imgFilePath = imgFilePath;
   this.pickedFilePath = pickedFilePath;
-  // this.pickedImage = false;
 
   sheetMusicObject[this.name] = this;
 }
-//render prototype
-//----------------------
 
-
-
+//--------------------------------
+//Sheet music object constructor prototype render function
+//--------------------------------
 SheetMusicObjectConstructor.prototype.render = function(parentId){
   var parent = document.getElementById(parentId);
 
@@ -71,16 +88,23 @@ SheetMusicObjectConstructor.prototype.render = function(parentId){
   parent.appendChild(img);
 };
 
+//---------------------------------
+//Build the sheet music object
+//---------------------------------
 for(i = 0; i < sheetMusicArray.length; i++){
-  // console.log(sheetMusicArray[i][2]);
-  // debugger;
   new SheetMusicObjectConstructor(sheetMusicArray[i][0], sheetMusicArray[i][1], sheetMusicArray[i][2]);
 }
-console.log(sheetMusicObject);
 
+//---------------------------------
+//Local storage setter function
+//---------------------------------
 function setStateToLocalStorage(){
   localStorage.setItem(STATE_KEY, JSON.stringify(STATE_OBJ));
 }
+
+//---------------------------------
+//Local storage getter function
+//---------------------------------
 function getStateFromLocalStorage(){
   var rawState = localStorage.getItem(STATE_KEY);
   STATE_OBJ = JSON.parse(rawState);
