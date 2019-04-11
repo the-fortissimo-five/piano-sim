@@ -5,9 +5,10 @@
 
 .musicSheet {
   grid-row: 3;
-  grid-column: 2 / 8;
-  height: 400px; 
-  width: 800px;
+  grid-column: 1 / last;
+  justify-self: center;
+  height: 250px; 
+  width: 500px;
 }
 
 .musicSheet img{
@@ -28,32 +29,30 @@
   background-color: #fcfcff;
 }
 
+#trackerContainer {
+  grid-row: 4;
+  grid-column: 1 / last;
+  justify-self: center;
+  margin-top: 20px;
+}
+
+#tracker {
+  font-size: 25px;
+  letter-spacing: 50px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bolder;
+
+}
+
 #keyboardInputContainer {
-  grid-column: 4 / 7;
+  grid-column: 5 / 7;
   grid-row: 6;
-  width: 300px;
-  height: 100px;
-}
-
-#keyboardInput {
-  font-size: 20px;
-}
-
-button {
-  background-color: #fefeff;
-  border: none;
-  color: rgb(70, 68, 68);
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 20px;
+  margin-top: 15px;
 }
 
 #historyClear {
-  grid-column: 8 / 10;
+  margin-left: 1px;
   grid-row: 6;
-  width: 200px;
-  height: 30px;
 
 }
 

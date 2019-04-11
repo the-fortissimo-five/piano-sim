@@ -41,7 +41,7 @@ KeyboardObjectConstructor.prototype.play = function(){
   audio.play();
 };
 // console.log(new keyboardObjectConstructor(soundArray[0], soundArray[1]));
-console.log(keyboardObject);
+// console.log(keyboardObject);
 function SheetMusicObjectConstructor(name, imgFilePath){
   this.name = name;
   this.imgFilePath =imgFilePath;
@@ -73,7 +73,7 @@ function getStateFromLocalStorage(){
   if(localStorage[STATE_KEY]){
     getStateFromLocalStorage();
     sheetMusicObject[STATE_OBJ.name].render(`item${0}`);
-    console.log(sheetMusicObject);
+    // console.log(sheetMusicObject);
   } else{
     new SheetMusicObjectConstructor(sheetMusicArray[0][0], sheetMusicArray[0][1]);
     sheetMusicObject[sheetMusicArray[0][0]].render(`item${0}`);
@@ -85,4 +85,4 @@ function getStateFromLocalStorage(){
   
 })();
 
-console.log(sheetMusicObject);
+// console.log(sheetMusicObject);
