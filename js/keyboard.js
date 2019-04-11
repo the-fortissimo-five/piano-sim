@@ -5,6 +5,8 @@ var VALID_CHARACTERS = ['S', 'D', 'F', 'J', 'K', 'L', ' ', ';'];
 var VALID_CODE_KEYS = ['KeyL', 'Space', 'KeyS', 'KeyD', 'KeyF', 'KeyJ', 'KeyK', 'Semicolon'];
 
 
+
+
 function limitCharacterlength(stringOfCharacters) {
   if (stringOfCharacters.length > CHARACTER_DISPLAY_LENGHT) {
     stringOfCharacters = stringOfCharacters.slice(1);

@@ -42,14 +42,19 @@ KeyboardObjectConstructor.prototype.play = function(){
 };
 // console.log(new keyboardObjectConstructor(soundArray[0], soundArray[1]));
 // console.log(keyboardObject);
-function SheetMusicObjectConstructor(name, imgFilePath){
+function SheetMusicObjectConstructor(name, imgFilePath, pickedFilePath){
   this.name = name;
-  this.imgFilePath =imgFilePath;
+  this.imgFilePath = imgFilePath;
+  this.pickedFilePath = pickedFilePath;
+  this.pickedImage = false;
 
   sheetMusicObject[this.name] = this;
 }
 //render prototype
 //----------------------
+
+
+
 SheetMusicObjectConstructor.prototype.render = function(parentId){
   var parent = document.getElementById(parentId);
 
@@ -61,6 +66,30 @@ SheetMusicObjectConstructor.prototype.render = function(parentId){
   parent.appendChild(img);
 };
 
+
+function createHeroImg() {
+  getStateFromLocalStorage();
+  sheetMusicObject[STATE_OBJ.name].render('item');
+  console.log(sheetMusicObject[STATE_OBJ.name]);
+
+  
+  for (var i = 0; i < sheetMusicArray.length; i++) {
+    if (sheetMusicObject[STATE_OBJ].pickedImage === true) {
+      sheetMusicObject[STATE_OBJ.name].imgFilePath = sheetMusicObject[STATE_OBJ.name].pickedFilePath;
+      sheetMusicObject[STATE_OBJ.name].render(`item${i}`);
+    } 
+    if (sheetMusicObject[STATE_OBJ].pickedImage === false) {
+      sheetMusicObject[STATE_OBJ.name].imgFilePath = sheetMusicObject[STATE_OBJ.name].pickedFilePath;
+      sheetMusicObject[STATE_OBJ.name].render(`item${i}`);
+    } 
+  }
+
+}
+
+
+// createHeroImg();
+
+
 function setStateToLocalStorage(){
   localStorage.setItem(STATE_KEY, JSON.stringify(STATE_OBJ));
 }
@@ -69,14 +98,20 @@ function getStateFromLocalStorage(){
   STATE_OBJ = JSON.parse(rawState);
   new SheetMusicObjectConstructor(STATE_OBJ.name, STATE_OBJ.imgFilePath);
 }
+
+
 (function onPageLoad(){
   if(localStorage[STATE_KEY]){
     getStateFromLocalStorage();
-    sheetMusicObject[STATE_OBJ.name].render(`item${0}`);
+    sheetMusicObject[STATE_OBJ.name].render('item');
+    // console.log(sheetMusicArray[0][2]);
+
     // console.log(sheetMusicObject);
   } else{
-    new SheetMusicObjectConstructor(sheetMusicArray[0][0], sheetMusicArray[0][1]);
+    new SheetMusicObjectConstructor(sheetMusicArray[0][0], sheetMusicArray[0][1], sheetMusicArray[0][2]);
     sheetMusicObject[sheetMusicArray[0][0]].render(`item${0}`);
+    console.log(sheetMusicArray[0][2]);
+
   }
 
   for(var i = 0; i < soundArray.length; i++){
