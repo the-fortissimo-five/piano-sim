@@ -8,12 +8,12 @@ var soundArray = [
   ['eKey', './assets/audio/e.wav', 'KeyF'],
   ['fKey', './assets/audio/f.wav', 'KeyJ'],
   ['gKey', './assets/audio/g.wav', 'KeyK'],
-  ['highC', './assets/audio/highC.wav', 'Semicolon']
+  ['highC', './assets/audio/highC.wav', 'Semicolon'],
 ];
 
 var sheetMusicArray = [
   ['odeToJoy', './assets/img/odeDefault.jpg', './assets/img/odePicked.jpg'],
-  ['cmajor', './assets/img/cmajorDefault.jpg', './assets/img/cmajorPicked.jpg']
+  ['cmajor', './assets/img/cmajorDefault.jpg', './assets/img/cmajorPicked.jpg'],
 ];
 
 var keyboardObject = {};
@@ -40,13 +40,18 @@ KeyboardObjectConstructor.prototype.play = function(){
 
   audio.play();
 };
+
+for(var i = 0; i < soundArray.length; i++){
+  new KeyboardObjectConstructor(soundArray[i][0], soundArray[i][1], soundArray[i][2]);
+}
 // console.log(new keyboardObjectConstructor(soundArray[0], soundArray[1]));
 // console.log(keyboardObject);
 function SheetMusicObjectConstructor(name, imgFilePath, pickedFilePath){
+
   this.name = name;
   this.imgFilePath = imgFilePath;
   this.pickedFilePath = pickedFilePath;
-  this.pickedImage = false;
+  // this.pickedImage = false;
 
   sheetMusicObject[this.name] = this;
 }
@@ -66,29 +71,12 @@ SheetMusicObjectConstructor.prototype.render = function(parentId){
   parent.appendChild(img);
 };
 
-
-function createHeroImg() {
-  getStateFromLocalStorage();
-  sheetMusicObject[STATE_OBJ.name].render('item');
-  console.log(sheetMusicObject[STATE_OBJ.name]);
-
-  
-  for (var i = 0; i < sheetMusicArray.length; i++) {
-    if (sheetMusicObject[STATE_OBJ].pickedImage === true) {
-      sheetMusicObject[STATE_OBJ.name].imgFilePath = sheetMusicObject[STATE_OBJ.name].pickedFilePath;
-      sheetMusicObject[STATE_OBJ.name].render(`item${i}`);
-    } 
-    if (sheetMusicObject[STATE_OBJ].pickedImage === false) {
-      sheetMusicObject[STATE_OBJ.name].imgFilePath = sheetMusicObject[STATE_OBJ.name].pickedFilePath;
-      sheetMusicObject[name].render(`item${i}`);
-    } 
-  }
-
+for(i = 0; i < sheetMusicArray.length; i++){
+  // console.log(sheetMusicArray[i][2]);
+  // debugger;
+  new SheetMusicObjectConstructor(sheetMusicArray[i][0], sheetMusicArray[i][1], sheetMusicArray[i][2]);
 }
-
-
-// createHeroImg();
-
+console.log(sheetMusicObject);
 
 function setStateToLocalStorage(){
   localStorage.setItem(STATE_KEY, JSON.stringify(STATE_OBJ));
@@ -96,28 +84,6 @@ function setStateToLocalStorage(){
 function getStateFromLocalStorage(){
   var rawState = localStorage.getItem(STATE_KEY);
   STATE_OBJ = JSON.parse(rawState);
-  new SheetMusicObjectConstructor(STATE_OBJ.name, STATE_OBJ.imgFilePath);
+  new SheetMusicObjectConstructor(STATE_OBJ.name, STATE_OBJ.imgFilePath, STATE_OBJ.pickedFilePath);
 }
 
-
-(function onPageLoad(){
-  if(localStorage[STATE_KEY]){
-    getStateFromLocalStorage();
-    sheetMusicObject[STATE_OBJ.name].render('item');
-    // console.log(sheetMusicArray[0][2]);
-
-    // console.log(sheetMusicObject);
-  } else{
-    new SheetMusicObjectConstructor(sheetMusicArray[0][0], sheetMusicArray[0][1], sheetMusicArray[0][2]);
-    sheetMusicObject[sheetMusicArray[0][0]].render(`item${0}`);
-    console.log(sheetMusicArray[0][2]);
-
-  }
-
-  for(var i = 0; i < soundArray.length; i++){
-    new KeyboardObjectConstructor(soundArray[i][0], soundArray[i][1], soundArray[i][2]);
-  }
-  
-})();
-
-// console.log(sheetMusicObject);

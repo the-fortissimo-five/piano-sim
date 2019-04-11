@@ -49,3 +49,13 @@ function changeTheNameOfThisFunction(event) {
 
 input.addEventListener('keydown', keyLogEventHandler);
 input.addEventListener('keydown', changeTheNameOfThisFunction);
+
+(function onPageLoadKeyboard(){
+  if(localStorage[STATE_KEY]){
+    getStateFromLocalStorage();
+    sheetMusicObject[STATE_OBJ.name].render('item');
+  } else{
+    sheetMusicObject[sheetMusicArray[0][0]].render('item');
+  }
+
+})();
