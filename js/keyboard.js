@@ -49,7 +49,7 @@ function keyLogEventHandler(event){
 //----------------------------
 function transitionReset (event){
   setTimeout(function(){document.getElementById(keyboardObject[event.code].name).className = 'pianoKeys';
-  }, 1000);
+  }, 300);
 }
 
 //----------------------------

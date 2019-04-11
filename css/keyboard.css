@@ -78,7 +78,7 @@
 }
 
 .played {
-  transition: all 1s ease;
+  transition: all .5s ease;
   background-color: ivory;
   transform: scale(.95);
   box-shadow: inset 0px 0px 10px 10px #5E535E;
