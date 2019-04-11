@@ -17,23 +17,18 @@ nav {
   grid-row: 1;
   /* justify-self: center; */
   text-align: center;
-  background: rgba(255, 222, 173, .8);
+  background: rgba(255, 222, 173, .15);
   /* border-radius: 15%; */
   font-family: Arial, Helvetica, sans-serif;
   font-size: 2em;
 }
-/* 
-nav p {
-  display: inline-block;
-  font-size: 13px;
-  font-family: Arial, Helvetica, sans-serif;
-  padding: 10px 100px;
+
+nav a {
+  display: inline-block;;
+  padding: .4em 100px;
   border: 1px outset black;
   margin: 0px -2px;
   background-color: rgb(214, 204, 191); 
-}*/
-nav a{
-  font-size: 1.5em;
 }
 
 a.active{
@@ -52,7 +47,8 @@ header {
   text-align: center;
   grid-column: 5 / 9;
   grid-row: 2;
-  /* margin-top: .75em; */
+  margin-top: .75em;
+  margin-bottom: .75em;
 }
 header h1 {
   font-size: 3em;
