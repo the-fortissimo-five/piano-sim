@@ -1,21 +1,30 @@
 'use strict';
 
-var CHARACTER_DISPLAY_LENGHT = 8;
-var VALID_CHARACTERS = ['S', 'D', 'F', 'J', 'K', 'L', ' ', ';'];
+//---------------------------
+//History log variables
+//---------------------------
+var CHARACTER_DISPLAY_LENGTH = 8;
+var VALID_CHARACTERS = ['S', 'D', 'F', 'J', 'K', 'L', '_', ';'];
 var VALID_CODE_KEYS = ['KeyL', 'Space', 'KeyS', 'KeyD', 'KeyF', 'KeyJ', 'KeyK', 'Semicolon'];
 
-
-
-
+//---------------------------
+//function to limit display of characters in history log
+//---------------------------
 function limitCharacterlength(stringOfCharacters) {
-  if (stringOfCharacters.length > CHARACTER_DISPLAY_LENGHT) {
+  if (stringOfCharacters.length > CHARACTER_DISPLAY_LENGTH) {
     stringOfCharacters = stringOfCharacters.slice(1);
   }
   return stringOfCharacters;
 }
 
+//---------------------------
+//function to log keys pressed and add to history log
+//---------------------------
 function addToTracker(keyPressed){
   keyPressed = keyPressed.toUpperCase();
+  if(keyPressed === ' '){
+    keyPressed = '_';
+  }
   if (VALID_CHARACTERS.includes(keyPressed)) {
     var parentId = document.getElementById('trackerContainer');
     var pElement = document.getElementById('tracker');
@@ -25,6 +34,9 @@ function addToTracker(keyPressed){
   }
 }
 
+//----------------------------
+//function key log event handler to activate play function in app.js
+//----------------------------
 function keyLogEventHandler(event){
   addToTracker(event.key);
   if (VALID_CODE_KEYS.includes(event.code)) {
@@ -32,6 +44,7 @@ function keyLogEventHandler(event){
   }
 }
 
+//----------------------------
 function transitionReset (event){
   setTimeout(function(){document.getElementById(keyboardObject[event.code].name).className = 'pianoKeys';
   }, 1000);
@@ -44,12 +57,16 @@ function changeTheNameOfThisFunction(event) {
     transition.addEventListener('transitionend',transitionReset(event));
   }
 }
-//keydown event listener
-//--------to be used for history later
 
+//--------------------------
+//Keyboard key press event listener
+//--------------------------
 input.addEventListener('keydown', keyLogEventHandler);
 input.addEventListener('keydown', changeTheNameOfThisFunction);
 
+//--------------------------
+//On page load IFFE (Immediately-invoked function expression)
+//--------------------------
 (function onPageLoadKeyboard(){
   if(localStorage[STATE_KEY]){
     getStateFromLocalStorage();
@@ -57,5 +74,4 @@ input.addEventListener('keydown', changeTheNameOfThisFunction);
   } else{
     sheetMusicObject[sheetMusicArray[0][0]].render('item');
   }
-
 })();
