@@ -4,7 +4,7 @@ var soundArray = [
   ['aKey', './assets/audio/a.wav', 'KeyL'],
   ['bKey', './assets/audio/b.wav', 'Space'],
   ['cKey', './assets/audio/c.wav', 'KeyS'],
-  ['dKey', './assets/audio/d.wav', 'KeyD'],
+  ['dKey', './assets/audio/D2.wav', 'KeyD'],
   ['eKey', './assets/audio/e.wav', 'KeyF'],
   ['fKey', './assets/audio/f.wav', 'KeyJ'],
   ['gKey', './assets/audio/g.wav', 'KeyK'],
