@@ -50,18 +50,22 @@ All of these sounds are licensed using the Creative Commons Public Domain Dedica
 
 ### General Stretch Goals list
 ### MVP 2
-* Make it prettier
 * Two examples of sheet music.
 * History tracker.
 * Animate Keypress on keyboard.
 
 ### MVP 3
+* More Music Sheets - Add more music 
+* Correct Keypress Validation
+* Make it prettier
+* Play from inscreen instead of input form
+
+### MVP 4 
 * Auto-play - Record what they play - payback
 * Flats & sharps
 * Timing - Note Duration
 * Alternate sounds
-* More Music Sheets - Add more music 
-* Write Music
 * Sound board
 * On-Mouse-Click
-* Correct Keypress Validation
+* Title Image
+* Write Music
