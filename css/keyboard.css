@@ -1,5 +1,5 @@
 #mainContainer {
-  grid-template-column: repeat(12, 1fr); 
+  grid-template-columns: repeat(12, 1fr); 
   grid-template-rows: 50px 100px 250px 50px 150px 75px 50px 1fr;
   grid-row-gap: 10px;
 }
@@ -8,14 +8,8 @@
 .musicSheet {
   grid-row: 3;
   grid-column: 1 / last;
+  height: auto; 
   justify-self: center;
-  height: 250px; 
-  width: 500px;
-}
-
-.musicSheet img{
-  width: 800px;
-  height: auto;
 }
 
 .logDisplay {
@@ -47,7 +41,7 @@
 }
 
 #keyboardInputContainer {
-  grid-column: 5 / 7;
+  grid-column: 6 / 8;
   grid-row: 7;
   margin-top: 15px;
 }
