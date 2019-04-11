@@ -56,13 +56,6 @@ KeyboardObjectConstructor.prototype.play = function(){
 };
 
 //--------------------------------
-//Build the keyboard object
-//--------------------------------
-for(var i = 0; i < soundArray.length; i++){
-  new KeyboardObjectConstructor(soundArray[i][0], soundArray[i][1], soundArray[i][2]);
-}
-
-//--------------------------------
 //Sheet music object constructor function
 //--------------------------------
 function SheetMusicObjectConstructor(name, imgFilePath, pickedFilePath){
@@ -83,17 +76,10 @@ SheetMusicObjectConstructor.prototype.render = function(parentId){
   var img = document.createElement('img');
   img.setAttribute('id', this.name);
   img.setAttribute('src', this.imgFilePath);
-  img.setAttribute('class', 'sheetMusic'); //delete later if we don't end up using
+  img.setAttribute('class', 'sheetMusic');
 
   parent.appendChild(img);
 };
-
-//---------------------------------
-//Build the sheet music object
-//---------------------------------
-for(i = 0; i < sheetMusicArray.length; i++){
-  new SheetMusicObjectConstructor(sheetMusicArray[i][0], sheetMusicArray[i][1], sheetMusicArray[i][2]);
-}
 
 //---------------------------------
 //Local storage setter function
@@ -111,3 +97,14 @@ function getStateFromLocalStorage(){
   new SheetMusicObjectConstructor(STATE_OBJ.name, STATE_OBJ.imgFilePath, STATE_OBJ.pickedFilePath);
 }
 
+//--------------------------------
+//IFFE (Immediately-invoked function expression) to create objects
+//--------------------------------
+(function createObjectsOnLoad(){
+  for(var i = 0; i < soundArray.length; i++){
+    new KeyboardObjectConstructor(soundArray[i][0], soundArray[i][1], soundArray[i][2]);
+  }
+  for(i = 0; i < sheetMusicArray.length; i++){
+    new SheetMusicObjectConstructor(sheetMusicArray[i][0], sheetMusicArray[i][1], sheetMusicArray[i][2]);
+  }
+})();
