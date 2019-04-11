@@ -25,7 +25,7 @@ nav {
   background: rgba(255, 222, 173, .8);
   border-radius: 15%;
   font-family: 'Playball', cursive;
-  font-size: 200%;
+  font-size: 2em;
 }
 /* 
 nav p {
@@ -54,6 +54,12 @@ nav a:hover {
 }
 
 header {
-  text-align: center; 
+  text-align: center;
   grid-column: 6 / 8;
+}
+header h1 {
+  font-size: 3em;
+}
+header p {
+  font-size: 1.20em;
 }
