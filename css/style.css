@@ -12,7 +12,7 @@ body {
 
 #mainContainer {
   display: grid;
-  grid-template-columns: repeat(12, [col-start] 1fr);
+  grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 50px 50px 250px 275px 1fr;
   grid-gap: 5px;
 }
@@ -25,6 +25,7 @@ nav {
   background: rgba(255, 222, 173, .8);
   border-radius: 15%;
   font-family: 'Playball', cursive;
+  font-size: 200%;
 }
 /* 
 nav p {
@@ -36,21 +37,23 @@ nav p {
   margin: 0px -2px;
   background-color: rgb(214, 204, 191); 
 }*/
+nav a{
+  font-size: 1.5em;
+}
+
 a.active{
   background-color: tan;
   color: black;
 }
-nav a{
-  font-size: 1.5em;
-}
+
 nav a:hover {
-  background: rgba(192, 192,192, .5);
+  background: rgba(192, 192,192, .8);
   color: brown;
   opacity: .25;
-  border-radius: 25px;
+  border-radius: 10px;
 }
 
 header {
-  text-align: center;
+  text-align: center; 
   grid-column: 6 / 8;
 }
