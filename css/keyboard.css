@@ -1,6 +1,6 @@
 #mainContainer {
   grid-template-column: repeat(12, 1fr); 
-  grid-template-rows: 50px 100px 250px 50px 150px 75px 50px 1fr;
+  grid-template-rows: 50px 100px 250px 50px 150px 75px 50px 25px 1fr;
   grid-row-gap: 10px;
 }
 
@@ -47,9 +47,17 @@
 }
 
 #keyboardInputContainer {
-  grid-column: 5 / 7;
+  grid-column: 6 / 8;
   grid-row: 7;
-  margin-top: 15px;
+}
+#keyboardInput{
+  resize:vertical, horizontal;
+  height: 2em;
+  width: 10em;
+  font-size: 1.5em;
+}
+#keyboardInput:focus{
+	outline: 10px solid silver;
 }
 
 #historyClear {
