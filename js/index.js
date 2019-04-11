@@ -7,7 +7,6 @@ function handleClick(event) {
   if(event.target.className === 'sheetMusic'){
     STATE_OBJ = sheetMusicObject[event.target.id];
     setStateToLocalStorage();
-    console.log(sheetMusicObject[STATE_OBJ.name]);
     document.location.href = './keyboard.html';
   }
 }
@@ -35,8 +34,8 @@ container.addEventListener('click', handleClick);
     }
   }else
   {
-    for(var j = 0; i < sheetMusicArray.length; j++){
-      sheetMusicObject[sheetMusicArray[i][0]].render(`item${j}`);
+    for(var j = 0; j < sheetMusicArray.length; j++){
+      sheetMusicObject[sheetMusicArray[j][0]].render(`item${j}`);
     }
   }
 })();

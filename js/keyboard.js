@@ -3,15 +3,15 @@
 //---------------------------
 //History log variables
 //---------------------------
-var CHARACTER_DISPLAY_LENGTH = 8;
-var VALID_CHARACTERS = ['S', 'D', 'F', 'J', 'K', 'L', '_', ';'];
-var VALID_CODE_KEYS = ['KeyL', 'Space', 'KeyS', 'KeyD', 'KeyF', 'KeyJ', 'KeyK', 'Semicolon'];
+var characterDisplayLength = 8;
+var validCharacters = ['S', 'D', 'F', 'J', 'K', 'L', '_', ';'];
+var validCodeKeys = ['KeyL', 'Space', 'KeyS', 'KeyD', 'KeyF', 'KeyJ', 'KeyK', 'Semicolon'];
 
 //---------------------------
 //Function to limit display of characters in history log
 //---------------------------
 function limitCharacterlength(stringOfCharacters) {
-  if (stringOfCharacters.length > CHARACTER_DISPLAY_LENGTH) {
+  if (stringOfCharacters.length > characterDisplayLength) {
     stringOfCharacters = stringOfCharacters.slice(1);
   }
   return stringOfCharacters;
@@ -25,7 +25,7 @@ function addToTracker(keyPressed){
   if(keyPressed === ' '){
     keyPressed = '_';
   }
-  if (VALID_CHARACTERS.includes(keyPressed)) {
+  if (validCharacters.includes(keyPressed)) {
     var parentId = document.getElementById('trackerContainer');
     var pElement = document.getElementById('tracker');
     pElement.textContent += keyPressed;
@@ -39,7 +39,7 @@ function addToTracker(keyPressed){
 //----------------------------
 function keyLogEventHandler(event){
   addToTracker(event.key);
-  if (VALID_CODE_KEYS.includes(event.code)) {
+  if (validCodeKeys.includes(event.code)) {
     keyboardObject[event.code].play();
   }
 }
@@ -55,8 +55,8 @@ function transitionReset (event){
 //----------------------------
 //Function to change element class to fire css transition event
 //----------------------------
-function changeTheNameOfThisFunction(event) {
-  if (VALID_CODE_KEYS.includes(event.code)) {
+function changeClassName(event) {
+  if (validCodeKeys.includes(event.code)) {
     document.getElementById(keyboardObject[event.code].name).className = 'played';
     var transition = document.querySelector('.played');
     transition.addEventListener('transitionend',transitionReset(event));
@@ -67,7 +67,7 @@ function changeTheNameOfThisFunction(event) {
 //Keyboard key press event listener
 //--------------------------
 input.addEventListener('keydown', keyLogEventHandler);
-input.addEventListener('keydown', changeTheNameOfThisFunction);
+input.addEventListener('keydown', changeClassName);
 
 //--------------------------
 //On page load IFFE (Immediately-invoked function expression)
