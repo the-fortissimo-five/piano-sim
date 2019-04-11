@@ -29,7 +29,6 @@ var keyboardObject = {};
 var sheetMusicObject = {};
 
 var container = document.getElementById('musicSheetWrapper');
-var input = document.querySelector('input');
 
 var STATE_KEY = 'sheetMusicState';
 var STATE_OBJ = {};

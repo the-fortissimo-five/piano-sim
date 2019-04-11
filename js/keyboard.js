@@ -66,8 +66,8 @@ function changeClassName(event) {
 //--------------------------
 //Keyboard key press event listener
 //--------------------------
-input.addEventListener('keydown', keyLogEventHandler);
-input.addEventListener('keydown', changeClassName);
+document.addEventListener('keydown', keyLogEventHandler);
+document.addEventListener('keydown', changeClassName);
 
 //--------------------------
 //On page load IFFE (Immediately-invoked function expression)
