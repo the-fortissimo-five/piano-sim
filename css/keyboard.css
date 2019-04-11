@@ -1,11 +1,6 @@
 #mainContainer {
-<<<<<<< HEAD
-  grid-template-column: repeat(12, 1fr); 
-  grid-template-rows: 50px 100px 250px 50px 150px 75px 50px 25px 1fr;
-=======
   grid-template-columns: repeat(12, 1fr); 
-  grid-template-rows: 50px 100px 250px 50px 150px 75px 50px 1fr;
->>>>>>> 00eccbe62b047b91f46d6e484a63c3fef9637065
+  grid-template-rows: 50px 100px 250px 50px 150px 100px 50px 20px;
   grid-row-gap: 10px;
 }
 
@@ -34,7 +29,7 @@
   grid-row: 6;
   grid-column: 1 / last;
   justify-self: center;
-  margin-top: 20px;
+  margin-top: 65px;
 }
 
 #tracker {
@@ -48,6 +43,7 @@
 #keyboardInputContainer {
   grid-column: 6 / 8;
   grid-row: 7;
+  margin-bottom: .5em;
 }
 #keyboardInput{
   resize:vertical, horizontal;
@@ -56,7 +52,7 @@
   font-size: 1.5em;
 }
 #keyboardInput:focus{
-	outline: 10px solid silver;
+	outline: 5px solid silver;
 }
 
 #historyClear {
@@ -77,7 +73,8 @@
 
 .pianoKeys {
   background-color: ivory;
-  border: 1px outset rgb(214, 208, 164);
+  border: 1px outset black;
+  margin-bottom: .85em;
 }
 
 .played {
@@ -107,7 +104,6 @@
 }
 #bKey {
   grid-column: 7 / 8;
-  text-align: left;
 }
 #highCKey {
   grid-column: 8 / 8;
@@ -115,12 +111,12 @@
 
 .letterInsideKey {
   display: inline-block;
-  margin: 200px 35% 0px;
+  margin: 175px 35% 0px;
   padding: 10px;
   border-radius: 10px;
   border: 1.5px solid black;
 }
 
-#bKey p {
-margin: 200px 19% 0px;
+#spaceKey{
+margin: 175px 19% 10px;
 }
