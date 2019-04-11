@@ -67,15 +67,15 @@
 }
 
 .pianoKeys {
-  background-color: rgb(235, 229, 181);
+  background-color: ivory;
   border: 1px outset rgb(214, 208, 164);
 }
 
 .played {
   transition: all 1s ease;
-  transform: scale(.85);
-  background-color:red;
-  border: 3px outset black;
+  background-color: ivory;
+  transform: scale(.95);
+  box-shadow: inset 0px 0px 10px 10px #5E535E;
 }
 #cKey {
   grid-column: 1 / 2;
