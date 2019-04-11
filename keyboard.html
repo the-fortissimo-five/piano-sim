@@ -16,15 +16,16 @@
         <p><a href="index.html">Sheet Music</a></p>
         <p><a href="about.html">About-Us</a></p>
       </nav>
-      <button onclick="clearHistoryField()">Clear History</button>
       <header>
         <h1>Keyboard Sim</h1>
         <p>Instructions: Use your keyboard to practice piano music!</p>
       </header>
       <section class="musicSheet" id="item0"></section>
-      <section class="logDisplay">
-        <textarea id="log" readonly></textarea>
+
+      <section id="trackerContainer">
+        <p id="tracker">Tracker</p>
       </section>
+
       <section id="pianoKeyboard">
         <div class="pianoKeys" id="cKey"><p class="letterInsideKey">S</p></div>
         <div class="pianoKeys" id="dKey"><p class="letterInsideKey">D</p></div>
