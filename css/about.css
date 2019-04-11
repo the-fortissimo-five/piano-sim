@@ -53,3 +53,10 @@ grid-column: 8 / 12;
 grid-row: 5;
 grid-column: 2 / 6;
 }
+figure{
+  display:table;
+}
+
+figcaption {
+  display: inline;
+}
