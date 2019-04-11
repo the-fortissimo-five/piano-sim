@@ -2,38 +2,57 @@ body {
   background-image: url("../assets/img/musicSheetBackground.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-}
-
-/* #mainContainer * h1{
-  font-size: 30px;
   font-family: Arial, Helvetica, sans-serif;
-  text-align: left;
-} */
+}
 
 #mainContainer {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 50px 50px 250px 275px 1fr;
-  grid-gap: 5px;
+  grid-gap: 10px;
 }
 
 nav {
   grid-column: 1 / last;
   grid-row: 1;
-  justify-self: center;
+  /* justify-self: center; */
+  text-align: center;
+  background: rgba(255, 222, 173, .15);
+  /* border-radius: 15%; */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2em;
 }
 
-nav p {
-  display: inline-block;
-  font-size: 13px;
-  font-family: Arial, Helvetica, sans-serif;
-  padding: 10px 100px;
+nav a {
+  display: inline-block;;
+  padding: .4em 100px;
   border: 1px outset black;
   margin: 0px -2px;
-  background-color: rgb(214, 204, 191);
+  background-color: rgb(214, 204, 191); 
+}
+
+a.active{
+  background-color: tan;
+  color: black;
+}
+
+nav a:hover {
+  background: rgba(192, 192,192, .8);
+  color: brown;
+  opacity: .25;
+  border-radius: 10px;
 }
 
 header {
   text-align: center;
-  grid-column: 6 / 8;
+  grid-column: 5 / 9;
+  grid-row: 2;
+  margin-top: .75em;
+  margin-bottom: .75em;
+}
+header h1 {
+  font-size: 3em;
+}
+header p {
+  font-size: 1.20em;
 }

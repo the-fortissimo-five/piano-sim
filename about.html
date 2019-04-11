@@ -8,37 +8,57 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
     <div id="mainContainer">
       <nav>
-        <p><a href="keyboard.html">Keyboard</a></p>
-        <p><a href="index.html">Sheet Music</a></p>
-        <p id="currentPage">About-Us</p>
+        <a href="index.html">Sheet Music</a>
+        <a href="keyboard.html">Keyboard</a>
+        <a class="active" href="about.html">About Us</a>
       </nav>
       <header>
-        <h1>About Us!</h1>
-        <p>Get to know the fortissimo-five.</p>
+        <!-- <h1>About Us!</h1>
+        <p>Get to know the fortissimo-five.</p> -->
       </header>
       <section class="biography" id="ed">
-        <img src="./assets/img/edPic.jpg" class="profilePic">
-        <p>Ed DeArment: Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus doloremque quis quod velit facere nostrum dolores saepe, quo blanditiis voluptatum nemo delectus maiores iusto distinctio voluptate sed est asperiores reiciendis.<a href="https://github.com/ekearm"><img class="octocat" src="./assets/img/octocat.png"></a></p>
+        <figure>
+          <img src="./assets/img/edPic.jpg" class="profilePic">
+          <p>Ed DeArment: I am a programmer, I have experince with python, ruby, C/C++, SQL, Javascript, and R. I have a very diverse background and have many interests. I strive to learn something new everyday. I love animals and have many pets. Some of my hobbies include: video-games, reading, hiking, and thinking about the big picture.</p>
+        </figure>
+        <figcaption><a href="https://github.com/ekearm"><img class="octocat" src="./assets/img/octocat.png"></a> <a href="https://www.linkedin.com/in/edricdearm/"></a><i class="fa fa-linkedin"></i></figcaption>
       </section>
       <section class="biography" id="felipe">
-        <img src="./assets/img/felipePic.jpg" class="profilePic">
-        <p>Felipe Delatorre: Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio consectetur sit nam adipisci! Est laboriosam, facilis doloremque nostrum unde praesentium veritatis? Veritatis dolor et asperiores sit eaque, exercitationem laboriosam. Magnam?<a href="https://github.com/felipedelatorre"><img class="octocat" src="./assets/img/octocat.png"></a></p>
+        <figure>
+          <img src="./assets/img/felipePic.jpg" class="profilePic">
+          <p>Felipe Delatorre: My name is Felipe. I am a Oregon State University graduate from Bend, OR. I am huge fan of clean and readable code. I know some C++ and I am currently learning JavaScript. I enjoy the tech scene and I would love to one day give a talk on that topic.</p>
+        </figure>
+        <figcaption class="right"><a href="https://github.com/felipedelatorre"><img class="octocat" src="./assets/img/octocat.png"></a> <a href="https://www.linkedin.com/in/felipedelatorre/"></a><i class="fa fa-linkedin"></i></figcaption>
       </section>
       <section class="biography" id="chloie">
-        <img src="./assets/img/chloiePic.jpg" class="profilePic">
-        <p>Chloie Parsons: I am a software developer, graphic designer, and illustrator. I speak Java, CSS, HTML, InDesign, Illustrtor, and PhotoShop. On a summer day you will find me kayaking or fishing.<a href="https://github.com/ChloieP"><img class="octocat" src="./assets/img/octocat.png"></a></p>
+        <figure>
+          <img src="./assets/img/chloiePic.jpg" class="profilePic">
+          <p>Chloie Parsons: I am a creative soul inhabiting an analytical brain. I love being outdoors and helping people achieve their dreams when it comes to their online presence. If it is sunny, you will find me on the lake, but snow will keep me by the fire. I have been to four countries and 50 states. My favorite color is orange and I have both a dog and a cat.</p>
+          </figure>
+          <figcaption><a href="https://github.com/ChloieP"><img class="octocat" src="./assets/img/octocat.png"></a> <a href="https://www.linkedin.com/in/chloieparsons/"></a><i class="fa fa-linkedin"></i></figcaption>
       </section>
       <section class="biography" id="conor">
-        <img src="./assets/img/conorTempPhoto.jpg" class="profilePic">
-        <p>Conor McCue: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, optio corporis molestias sunt dolores nulla, reprehenderit praesentium harum amet accusamus ut aliquid cum cupiditate ratione omnis quas quam quaerat quis!<a href="https://github.com/CMcCue95"><img class="octocat" src="./assets/img/octocat.png"></a></p>
+        <figure>
+          <img src="./assets/img/conorTempPhoto.jpg" class="profilePic">
+          <p>Conor McCue: Native Oregonian and apprentice software developer through Apprenti and COCC's Devstation. I am hoping to build tools that will enable people to generate a greater understanding of the world around them. My non-digital passions include rock climbing, carpentry, backpacking, and gardening. Ask me about the 100+ seedlings I have in my home office.</p>
+        </figure>
+        <figcaption class="right">
+          <a href="https://github.com/CMcCue95"><img class="octocat" src="./assets/img/octocat.png"></a> <a href="https://www.linkedin.com/in/conormccue/"></a><i class="fa fa-linkedin"></i>
+        </figcaption>
       </section>
       <section class="biography" id="jeff">
-        <img src="./assets/img/jeffPic.jpg" class="profilePic">
-        <p>Jeff Lawrence: Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium placeat recusandae aliquam laudantium rerum consequuntur in aspernatur dolore nemo perferendis molestiae, quasi quibusdam iusto eius similique pariatur voluptatibus atque veritatis!<a href="https://github.com/JeffLawrence1"><img class="octocat" src="./assets/img/octocat.png"></a></p>
+        <figure>
+          <img src="./assets/img/jeffPic.jpg" class="profilePic">
+          <p>Jeff Lawrence: Throughout my life I have always enjoyed learning and exploring new technologies as they entered the marketplace.  In recent years I have become very interested in software development.  I really enjoy solving problems and learning new concepts, both of which are an everyday occurrence when programming.  Until now, I never had the opportunity to transition careers and actually work in the field and I couldn't be more excited.</p>
+        </figure>
+        <figcaption>
+          <a href="https://github.com/JeffLawrence1"><img class="octocat" src="./assets/img/octocat.png"></a> <a href="https://www.linkedin.com/in/jeff-lawrence1/"></a><i class="fa fa-linkedin"></i>
+        </figcaption>
       </section>
     </div>
     <!-- <script src="./js/app.js"></script> -->
