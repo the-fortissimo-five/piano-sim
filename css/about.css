@@ -1,0 +1,55 @@
+#mainContainer {
+  grid-template-rows: 50px 50px repeat(7, 1fr);
+}
+
+.profilePic{
+  height: 150px;
+  width: auto;
+  justify-self: center;
+}
+
+#ed p, #felipe p, #chloie p, #conor p, #jeff p{
+  font-size: 18px;
+  line-height: 1.6;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#ed img, #chloie img, #jeff img{
+  float: left;
+  padding-right: 15px;
+}
+
+#felipe img, #conor img{
+  float: right;
+  padding-left: 15px;
+}
+
+#ed{
+grid-row: 3;
+grid-column: 2 / 6;
+padding-bottom: 50px;
+}
+
+.octocat{
+  width: 25px;
+  height: auto;
+}
+
+#felipe{
+grid-row: 3;
+grid-column: 8 / 12;
+}
+
+#chloie{
+grid-row: 4;
+grid-column: 2 / 6;
+}
+
+#conor{
+grid-row: 4;
+grid-column: 8 / 12;
+}
+
+#jeff{
+grid-row: 5;
+grid-column: 2 / 6;
+}
