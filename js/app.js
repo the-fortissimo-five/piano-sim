@@ -80,7 +80,7 @@ function createHeroImg() {
     } 
     if (sheetMusicObject[STATE_OBJ].pickedImage === false) {
       sheetMusicObject[STATE_OBJ.name].imgFilePath = sheetMusicObject[STATE_OBJ.name].pickedFilePath;
-      sheetMusicObject[STATE_OBJ.name].render(`item${i}`);
+      sheetMusicObject[name].render(`item${i}`);
     } 
   }
 
