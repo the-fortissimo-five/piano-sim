@@ -20,6 +20,8 @@ var soundArray = [
 var sheetMusicArray = [
   ['odeToJoy', './assets/img/odeDefault.jpg', './assets/img/odePicked.jpg'],
   ['cmajor', './assets/img/cmajorDefault.jpg', './assets/img/cmajorPicked.jpg'],
+  ['dependsOnTheWeather', './assets/img/dependsOnTheWeatherDefault.jpg', './assets/img/dependsOnTheWeatherPicked.jpg'],
+  ['breakEveryChain', './assets/img/breakEveryChainDefault.jpg','./assets/img/breakEveryChainPicked.jpg'],
 ];
 
 //-------------------------------
