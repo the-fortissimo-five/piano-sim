@@ -15,19 +15,18 @@ body {
 nav {
   grid-column: 1 / last;
   grid-row: 1;
-  /* justify-self: center; */
   text-align: center;
   background: rgba(255, 222, 173, .15);
-  /* border-radius: 15%; */
   font-family: Arial, Helvetica, sans-serif;
   font-size: 2em;
 }
 
 nav a {
-  display: inline-block;;
+  display: inline-block;
+  text-decoration: none;
   padding: .4em 100px;
   border: 1px outset black;
-  margin: 0px -2px;
+  margin: 5px -2px;
   background-color: rgb(214, 204, 191); 
 }
 
