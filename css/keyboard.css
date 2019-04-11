@@ -1,11 +1,5 @@
 #mainContainer {
-<<<<<<< HEAD
-  grid-template-column: repeat(12, 1fr); 
-  grid-template-rows: 50px 100px 250px 50px 150px 75px 50px 25px 1fr;
-=======
-  grid-template-columns: repeat(12, 1fr); 
-  grid-template-rows: 50px 100px 250px 50px 150px 75px 50px 1fr;
->>>>>>> 00eccbe62b047b91f46d6e484a63c3fef9637065
+  grid-template-rows: 50px 50px 400px 30px 50px 20px;
   grid-row-gap: 10px;
 }
 
@@ -15,26 +9,17 @@
   grid-column: 1 / last;
   height: auto; 
   justify-self: center;
+  margin-top: .4em;
 }
 
-.logDisplay {
-  grid-row: 3;
-  grid-column: 8 / 11;
-}
-
-#log {
-  height: 245px;
-  max-height: 245px;
-  width: 230px;
-  max-width: 450px;
-  background-color: #fcfcff;
+img {
+  height: 400px;
 }
 
 #trackerContainer {
-  grid-row: 6;
+  grid-row: 4;
   grid-column: 1 / last;
   justify-self: center;
-  margin-top: 3em;
 }
 
 #tracker {
@@ -42,32 +27,33 @@
   letter-spacing: 50px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bolder;
-
+  padding: 20px;
 }
 
 #keyboardInputContainer {
   grid-column: 6 / 8;
-  grid-row: 7;
+  grid-row: 5;
+  margin-bottom: .5em;
+  margin-top: .25em;
 }
 #keyboardInput{
   resize:vertical, horizontal;
-  height: 2em;
+  height: 1em;
   width: 10em;
   font-size: 1.5em;
+  margin-top: .5em;
+  background: transparent;
+}
+::placeholder{
+  color: black;
 }
 #keyboardInput:focus{
-	outline: 10px solid silver;
-}
-
-#historyClear {
-  margin-left: 1px;
-  grid-row: 6;
-
+	outline: 5px solid silver;
 }
 
 #pianoKeyboard {
   grid-column: 2 / 12;
-  grid-row: 8;
+  grid-row: 6;
   display: grid;
   grid-template-columns: repeat(8, 8%);
   grid-gap: 5px;
@@ -77,13 +63,15 @@
 
 .pianoKeys {
   background-color: ivory;
-  border: 1px outset rgb(214, 208, 164);
+  border: 1px outset black;
+  margin-bottom: .85em;
 }
 
 .played {
-  transition: all 1s ease;
+  transition: all .5s ease;
   background-color: ivory;
   transform: scale(.95);
+  margin-bottom: .85em;
   box-shadow: inset 0px 0px 10px 10px #5E535E;
 }
 #cKey {
@@ -107,7 +95,6 @@
 }
 #bKey {
   grid-column: 7 / 8;
-  text-align: left;
 }
 #highCKey {
   grid-column: 8 / 8;
@@ -115,12 +102,13 @@
 
 .letterInsideKey {
   display: inline-block;
-  margin: 200px 35% 0px;
+  margin: 175px 35% 0px;
   padding: 10px;
   border-radius: 10px;
   border: 1.5px solid black;
 }
 
-#bKey p {
-margin: 200px 19% 0px;
+#spaceKey{
+/* margin: 175px 19% 10px; */
+margin-left: 19%;
 }
