@@ -9,7 +9,7 @@ body {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 50px 50px 250px 275px 1fr;
-  grid-gap: 5px;
+  grid-gap: 10px;
 }
 
 nav {
@@ -52,6 +52,7 @@ header {
   text-align: center;
   grid-column: 5 / 9;
   grid-row: 2;
+  /* margin-top: .75em; */
 }
 header h1 {
   font-size: 3em;
