@@ -1,8 +1,8 @@
 # piano-sim
-Proof-of-concept for a piano simulator to fulfill a Codefellows 201 final project.
+Proof-of-concept for a piano simulator to fulfill the CodeFellows 201 final project.
 
 ## Group Members
-Chloie Parson\
+Chloie Parsons\
 Conor McCue\
 Edric DeArment\
 Felipe Delatorre\
@@ -18,7 +18,7 @@ reset.css\
 eslint.json
 
 ## Domain
-Makes learning notes on the piano fun using a pc. Makes keyboarding more interactive using piano keys.\
+Makes learning notes on the piano fun using a computer. Makes keyboarding more interactive using piano keys.
 
 ## Licensing/Attribution
 This project uses these sounds from freesound.org:\
@@ -32,13 +32,13 @@ b.wav by ramas26 (https://freesound.org/people/ramas26/sounds/95327/)\
 c5.wav by Teddy_Frost (https://freesound.org/people/Teddy_Frost/sounds/334537/)\
 All of these sounds are licensed using the Creative Commons Public Domain Dedication License. Learn more here: https://creativecommons.org/publicdomain/zero/1.0/
 
+
 ### MVP1:
 * About Us Page
 * Nav Bar
 * Sweet Group Title
 * 5 Photos
 * Elevator Pitches
-* Nav Bar
 * 8 Keys - Range 1 Octave
 * Audiofile for each (1 at a time)
 * Renders the image from music examples.
@@ -54,6 +54,7 @@ All of these sounds are licensed using the Creative Commons Public Domain Dedica
 * Two examples of sheet music.
 * History tracker.
 * Animate Keypress on keyboard.
+
 ### MVP 3
 * Auto-play - Record what they play - payback
 * Flats & sharps
