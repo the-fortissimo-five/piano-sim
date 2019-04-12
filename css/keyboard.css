@@ -1,5 +1,5 @@
 #mainContainer {
-  grid-template-rows: 50px 50px 400px 30px 50px 20px;
+  grid-template-rows: 50px 75px 400px 30px 50px 20px;
   grid-row-gap: 10px;
 }
 
