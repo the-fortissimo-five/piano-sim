@@ -22,14 +22,14 @@ Makes learning notes on the piano fun using a computer. Makes keyboarding more i
 
 ## Licensing/Attribution
 This project uses these sounds from freesound.org:\
-piano normal d4.wav by Teddy_Frost (https://freesound.org/people/Teddy_Frost/sounds/334536/)\
-c.wav by ramas26 (https://freesound.org/people/ramas26/sounds/95328/)\
-e.wav by ramas26 (https://freesound.org/people/ramas26/sounds/95330/)\
-f.wav by ramas26 (https://freesound.org/people/ramas26/sounds/95331/)\
-g.wav by ramas26 (https://freesound.org/people/ramas26/sounds/95332/)\
-a.wav by ramas26 (https://freesound.org/people/ramas26/sounds/95326/)\
-b.wav by ramas26 (https://freesound.org/people/ramas26/sounds/95327/)\
-c5.wav by Teddy_Frost (https://freesound.org/people/Teddy_Frost/sounds/334537/)\
+piano normal d4.wav by Teddy_Frost (https://freesound.org/people/Teddy_Frost/sounds/334536/) \
+c.wav by ramas26 (https://freesound.org/people/ramas26/sounds/95328/) \
+e.wav by ramas26 (https://freesound.org/people/ramas26/sounds/95330/) \
+f.wav by ramas26 (https://freesound.org/people/ramas26/sounds/95331/) \
+g.wav by ramas26 (https://freesound.org/people/ramas26/sounds/95332/) \
+a.wav by ramas26 (https://freesound.org/people/ramas26/sounds/95326/) \
+b.wav by ramas26 (https://freesound.org/people/ramas26/sounds/95327/) \
+c5.wav by Teddy_Frost (https://freesound.org/people/Teddy_Frost/sounds/334537/) \
 All of these sounds are licensed using the Creative Commons Public Domain Dedication License. Learn more here: https://creativecommons.org/publicdomain/zero/1.0/
 
 

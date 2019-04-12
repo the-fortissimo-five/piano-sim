@@ -1,5 +1,5 @@
 #mainContainer {
-  grid-template-rows: 50px 50px 400px 30px 50px 20px;
+  grid-template-rows: 50px 75px 400px 30px 50px 20px;
   grid-row-gap: 10px;
 }
 
@@ -102,13 +102,12 @@ img {
 
 .letterInsideKey {
   display: inline-block;
-  margin: 175px 35% 0px;
+  margin: 175px 35% 5px;
   padding: 10px;
   border-radius: 10px;
   border: 1.5px solid black;
 }
 
 #spaceKey{
-/* margin: 175px 19% 10px; */
 margin-left: 19%;
 }
