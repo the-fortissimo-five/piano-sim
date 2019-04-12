@@ -112,3 +112,6 @@ img {
 /* margin: 175px 19% 10px; */
 margin-left: 19%;
 }
+#clickArea {
+  display:contents;
+}
