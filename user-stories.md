@@ -1,19 +1,19 @@
 # User Stories
 ## General
 * As a user, I want a navigation bar with eye-catching styling and descriptive names, so that I can navigate quickly to whatever I’d like to see on the web app.
-* As a user, I want to know where I am on the page by refferin to the tittle of the page
+* As a user, I want to know where I am on the page by referring to the title of the page
 
 ## index.html
-* As a member of the development team, I want the index page to have at least one examples of a music sheet, so that the functionality of the app can be demonstrated.
-* As a member of the development team, I want to use localStorage to hold the relevant selection from the index page, so that the ./keyboard page will reflect the selection made by the user.
+* As a member of the development team, I want the index page to have at least one example of a music sheet, so that the functionality of the app can be demonstrated.
+* As a member of the development team, I want to use localStorage to hold the relevant selection from the index page, so that the keyboard page will reflect the selection made by the user.
 * As a user, I want to have instructions on the page that explain to me how to use the site. 
-* As a user, I want to know which music sheet I have on keyboard, so that I can keep track of what I selected between pages.
+* As a user, I want to know which music sheet I have on the keyboard page, so that I can keep track of what I selected between pages.
 
 ## about-us.html
 * As a member of the development team, I want to come up with a sweet group name, so that people will be more likely to remember us and our presentation.
 * As a member of the development team, I want to display a photo of each of us along with a short biography, so that users can familiarize themselves with the development team.
 * As a user, I’d like to see those introductions, so that I can place the project into the context of the development team’s educational path.
-* As a user, I'd like to be able to find a way to contact the creators of the project, so I can forward any follow-up questions to an appropriate person.
+* As a user, I'd like to be able to find a way to contact the creators of the project, so I can forward any follow-up questions to the appropriate person.
 
 ## keyboard.html
 * As a member of the development team, I’d like to create a piano emulator, so that I can demonstrate my skills and talents in a fun and interesting way.
