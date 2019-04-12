@@ -69,6 +69,15 @@ function changeClassName(event) {
 document.addEventListener('keydown', keyLogEventHandler);
 document.addEventListener('keydown', changeClassName);
 
+//---------------------------
+//Mouse click event listener
+//---------------------------
+var clickListen = document.getElementById('clickArea');
+clickListen.addEventListener('click', wrongPlaceToClickHandler);
+function wrongPlaceToClickHandler(){
+  alert('Please use the keyboard to play!');
+}
+
 //--------------------------
 //On page load IFFE (Immediately-invoked function expression)
 //--------------------------

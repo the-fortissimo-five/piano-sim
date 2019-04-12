@@ -111,3 +111,6 @@ img {
 #spaceKey{
 margin-left: 19%;
 }
+#clickArea {
+  display:contents;
+}
