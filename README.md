@@ -20,6 +20,9 @@ eslint.json
 ## Domain
 Makes learning notes on the piano fun using a computer. Makes keyboarding more interactive using piano keys.
 
+## Deployed Site
+[Piano Sim on Netlify](https://unruffled-franklin-e9baf1.netlify.com/)
+
 ## Licensing/Attribution
 This project uses these sounds from freesound.org:\
 piano normal d4.wav by Teddy_Frost (https://freesound.org/people/Teddy_Frost/sounds/334536/) \
